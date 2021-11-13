@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				-200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "phil idle"
+		},
+		{
+			"offsets": [
+				13,
+				-201
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "phil Left"
+		},
+		{
+			"offsets": [
+				-80,
+				-207
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "phil Right"
+		},
+		{
+			"offsets": [
+				-10,
+				-324
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "phil Down"
+		},
+		{
+			"offsets": [
+				-17,
+				-135
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "phil Up"
+		},
+		{
+			"offsets": [
+				40,
+				-410
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "dead",
+			"loop": false,
+			"name": "rip bozo"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/phil",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "phil",
+	"flip_x": false,
+	"healthbar_colors": [
+		28,
+		117,
+		25
+	],
+	"camera_position": [
+		-20,
+		380
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
