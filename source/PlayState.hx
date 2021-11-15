@@ -386,7 +386,7 @@ class PlayState extends MusicBeatState
 				white.makeGraphic(Std.int(FlxG.width * 1), Std.int(FlxG.height * 1), FlxColor.WHITE);
 				add(white);
 				var bg:BGSprite = new BGSprite('philbg', 0, 0, 1, 1);
-				bg.antialiasing = false ;
+				bg.antialiasing = true;
 				bg.scale.set(1.25, 1.25);
 				add(bg);
 
