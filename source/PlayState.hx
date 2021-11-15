@@ -382,13 +382,22 @@ class PlayState extends MusicBeatState
 					add(stageCurtains);
 				}
 			case 'philBg':
-				var white:FlxSprite = new FlxSprite(0,0);
-				white.makeGraphic(Std.int(FlxG.width * 1), Std.int(FlxG.height * 1), FlxColor.WHITE);
+				var white:FlxSprite = new FlxSprite().makeGraphic(FlxG.width * 5000, 1000, FlxColor.WHITE);
 				add(white);
 				var bg:BGSprite = new BGSprite('philbg', 0, 0, 1, 1);
 				bg.antialiasing = true;
 				bg.scale.set(1.25, 1.25);
 				add(bg);
+
+			case 'slackBg':
+				var hell:BGSprite = new BGSprite('slackBg', 0, 0, 1.2, 1.2);
+				hell.antialiasing = true;
+				hell.screenCenter();
+				add(hell);
+
+				var hellplatforms = new BGSprite('hellPlatforms', 0, -200, 1, 1);
+				hellplatforms.antialiasing = true;
+				add(hellplatforms);
 
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
@@ -755,6 +764,8 @@ class PlayState extends MusicBeatState
 				var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069); //nice
 				insert(members.indexOf(dadGroup) - 1, evilTrail);
 			case 'philBg':
+				gf.visible = false;
+			case 'slackBg':
 				gf.visible = false;
 		}
 
