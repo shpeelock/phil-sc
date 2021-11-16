@@ -393,10 +393,12 @@ class PlayState extends MusicBeatState
 				var hell:BGSprite = new BGSprite('slackBg', 0, 0, 1.2, 1.2);
 				hell.antialiasing = true;
 				hell.screenCenter();
+				hell.scale.set(1.5,1.5);
 				add(hell);
 
-				var hellplatforms = new BGSprite('hellPlatforms', 0, -200, 1, 1);
+				var hellplatforms = new BGSprite('hellPlatforms', 400, 1090, 1, 1);
 				hellplatforms.antialiasing = true;
+				hellplatforms.scale.set(1.95,1.95);
 				add(hellplatforms);
 
 			case 'spooky': //Week 2
@@ -1057,6 +1059,21 @@ class PlayState extends MusicBeatState
 		super.create();
 	}
 
+	function spacebarIntro():Void {
+		var	spacebarWarning = new FlxText(0, 0, 500); // x, y, width
+			spacebarWarning.text = "SPACEBAR TO DODGE!!";
+			spacebarWarning.setFormat(Paths.font("vcr.ttf"), 42, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			spacebarWarning.setBorderStyle(OUTLINE, FlxColor.RED, 1);
+			spacebarWarning.alpha = 0;
+			spacebarWarning.cameras = [camHUD];
+			spacebarWarning.screenCenter();
+			add(spacebarWarning);
+			FlxTween.tween(spacebarWarning, {alpha: 1}, Conductor.stepCrochet * 2 / 1000, {ease: FlxEase.quadOut});
+				new FlxTimer().start(1.5, function(tmr:FlxTimer){
+					FlxTween.tween(spacebarWarning, {alpha: 0}, Conductor.stepCrochet * 2 / 1000, {ease: FlxEase.quadOut});
+		});
+	}
+
 	public function addTextToDebug(text:String) {
 		#if LUA_ALLOWED
 		luaDebugGroup.forEachAlive(function(spr:DebugLuaText) {
@@ -1286,6 +1303,8 @@ class PlayState extends MusicBeatState
 	// For being able to mess with the sprites on Lua
 	public var countDownSprites:Array<FlxSprite> = [];
 
+	var isSpacebarintroActive:Bool = false;
+
 	public function startCountdown():Void
 	{
 		if(startedCountdown) {
@@ -1355,6 +1374,11 @@ class PlayState extends MusicBeatState
 					bottomBoppers.dance(true);
 					santa.dance(true);
 				}
+
+				if (curStage == 'slackBg'){
+					spacebarIntro();
+				}
+
 
 				switch (swagCounter)
 				{
@@ -1495,7 +1519,7 @@ class PlayState extends MusicBeatState
 	private function generateSong(dataPath:String):Void
 	{
 		// FlxG.log.add(ChartParser.parse());
-songSpeed = SONG.speed;
+		songSpeed = SONG.speed;
 				if(ClientPrefs.scroll) {
 					songSpeed = ClientPrefs.speed;
 				}
@@ -2631,6 +2655,9 @@ songSpeed = SONG.speed;
 
 			case 'Kill Henchmen':
 				killHenchmen();
+
+			case 'spacebarIntroTest':
+				spacebarIntro();
 
 			case 'Add Camera Zoom':
 				if(ClientPrefs.camZooms && FlxG.camera.zoom < 1.35) {
