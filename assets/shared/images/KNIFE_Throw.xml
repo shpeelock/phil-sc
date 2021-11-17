@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="KNIFE_Throw.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="knive thro0000" x="0" y="0" width="1529" height="720" frameX="0" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0001" x="4325" y="0" width="1283" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0002" x="0" y="720" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0003" x="0" y="720" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0004" x="1398" y="720" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0005" x="1398" y="720" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0006" x="1529" y="0" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0007" x="1529" y="0" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0008" x="2796" y="720" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0009" x="2796" y="720" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0010" x="2927" y="0" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0011" x="4194" y="720" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0012" x="2927" y="0" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0013" x="4194" y="720" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0014" x="2927" y="0" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0015" x="4194" y="720" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0016" x="4194" y="720" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0017" x="4194" y="720" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+	<SubTexture name="knive thro0018" x="4194" y="720" width="1398" height="720" frameX="-246" frameY="0" frameWidth="1644" frameHeight="720"/>
+</TextureAtlas>

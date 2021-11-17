@@ -190,6 +190,9 @@ class PlayState extends MusicBeatState
 	var phillyCityLightsEventTween:FlxTween;
 	var trainSound:FlxSound;
 
+	var bfDodging:Bool = false;
+	var bfCanDodge:Bool = false;
+
 	var limoKillingState:Int = 0;
 	var limo:BGSprite;
 	var limoMetalPole:BGSprite;
@@ -205,6 +208,8 @@ class PlayState extends MusicBeatState
 	var bottomBoppers:BGSprite;
 	var santa:BGSprite;
 	var heyTimer:Float;
+
+	public static var deathByKnife:Bool = false;
 
 	var bgGirls:BackgroundGirls;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
@@ -1059,18 +1064,48 @@ class PlayState extends MusicBeatState
 		super.create();
 	}
 
-	function spacebarIntro():Void {
-		var	spacebarWarning = new FlxText(0, 0, 500); // x, y, width
-			spacebarWarning.text = "SPACEBAR TO DODGE!!";
-			spacebarWarning.setFormat(Paths.font("vcr.ttf"), 42, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-			spacebarWarning.setBorderStyle(OUTLINE, FlxColor.RED, 1);
-			spacebarWarning.alpha = 0;
-			spacebarWarning.cameras = [camHUD];
-			spacebarWarning.screenCenter();
-			add(spacebarWarning);
-			FlxTween.tween(spacebarWarning, {alpha: 1}, Conductor.stepCrochet * 2 / 1000, {ease: FlxEase.quadOut});
+	function spacebarInstructions():Void {
+		var	spacebarInstructions = new FlxText(0, 0, 500); // x, y, width
+		spacebarInstructions.text = "SPACEBAR TO DODGE!!";
+		spacebarInstructions.setFormat(Paths.font("vcr.ttf"), 42, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		spacebarInstructions.setBorderStyle(OUTLINE, FlxColor.RED, 1);
+		spacebarInstructions.alpha = 0;
+		spacebarInstructions.cameras = [camHUD];
+		spacebarInstructions.screenCenter();
+			add(spacebarInstructions);
+			FlxTween.tween(spacebarInstructions, {alpha: 1}, Conductor.stepCrochet * 2 / 1000, {ease: FlxEase.quadOut});
 				new FlxTimer().start(1.5, function(tmr:FlxTimer){
-					FlxTween.tween(spacebarWarning, {alpha: 0}, Conductor.stepCrochet * 2 / 1000, {ease: FlxEase.quadOut});
+					FlxTween.tween(spacebarInstructions, {alpha: 0}, Conductor.stepCrochet * 2 / 1000, {ease: FlxEase.quadOut});
+		});
+	}
+
+	function spacebarWarning():Void {
+		var	spacebarPrepare = new FlxText(0, 0, 500); // x, y, width
+		spacebarPrepare.text = "DODGE!!";
+		spacebarPrepare.setFormat(Paths.font("vcr.ttf"), 50, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		spacebarPrepare.setBorderStyle(OUTLINE, FlxColor.RED, 1);
+		spacebarPrepare.alpha = 1;
+		spacebarPrepare.cameras = [camHUD];
+		spacebarPrepare.screenCenter();
+		add(spacebarPrepare);
+		new FlxTimer().start(0.1, function(tmr:FlxTimer)
+			{
+				FlxTween.tween(spacebarPrepare, {alpha: 0}, Conductor.stepCrochet * 10 / 1000, {ease: FlxEase.quadOut});
+		});
+	}
+
+	function spacebarWarningDouble():Void {
+		var	spacebarPrepareDouble = new FlxText(0, 0, 500); // x, y, width
+		spacebarPrepareDouble.text = "DODGE!! x2";
+		spacebarPrepareDouble.setFormat(Paths.font("vcr.ttf"), 50, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		spacebarPrepareDouble.setBorderStyle(OUTLINE, FlxColor.RED, 1);
+		spacebarPrepareDouble.alpha = 1;
+		spacebarPrepareDouble.cameras = [camHUD];
+		spacebarPrepareDouble.screenCenter();
+		add(spacebarPrepareDouble);
+		new FlxTimer().start(0.1, function(tmr:FlxTimer)
+			{
+				FlxTween.tween(spacebarPrepareDouble, {alpha: 0}, Conductor.stepCrochet * 10 / 1000, {ease: FlxEase.quadOut});
 		});
 	}
 
@@ -1303,8 +1338,6 @@ class PlayState extends MusicBeatState
 	// For being able to mess with the sprites on Lua
 	public var countDownSprites:Array<FlxSprite> = [];
 
-	var isSpacebarintroActive:Bool = false;
-
 	public function startCountdown():Void
 	{
 		if(startedCountdown) {
@@ -1376,7 +1409,7 @@ class PlayState extends MusicBeatState
 				}
 
 				if (curStage == 'slackBg'){
-					spacebarIntro();
+					spacebarInstructions();
 				}
 
 
@@ -2657,7 +2690,13 @@ class PlayState extends MusicBeatState
 				killHenchmen();
 
 			case 'spacebarIntroTest':
-				spacebarIntro();
+				bossAttack();
+
+			case 'spacebarWarning':
+				spacebarWarning();
+
+			case 'spacebarWarning x2':
+				spacebarWarningDouble();
 
 			case 'Add Camera Zoom':
 				if(ClientPrefs.camZooms && FlxG.camera.zoom < 1.35) {
@@ -3290,8 +3329,32 @@ class PlayState extends MusicBeatState
 		});
 	}
 
+
 	private function keyShit():Void
 	{
+		if(curStage == 'slackBg'){
+
+			if(FlxG.keys.justPressed.SPACE){
+				trace('i am alive');
+				trace('DODGE START!');
+				bfDodging = true;
+				bfCanDodge = false;
+
+				boyfriend.playAnim('dodge');
+
+				new FlxTimer().start(0.600, function(tmr:FlxTimer)
+				{
+					bfDodging = false;
+					trace('DODGE END!');
+					new FlxTimer().start(0.125, function(tmr:FlxTimer)
+					{
+						bfCanDodge = true;
+						trace('DODGE RECHARGED!');
+					});
+				});
+			}
+		}
+
 		// HOLDING
 		var up = controls.NOTE_UP;
 		var right = controls.NOTE_RIGHT;
@@ -3745,6 +3808,37 @@ class PlayState extends MusicBeatState
 			FlxTween.tween(halloweenWhite, {alpha: 0.5}, 0.075);
 			FlxTween.tween(halloweenWhite, {alpha: 0}, 0.25, {startDelay: 0.15});
 		}
+	}
+
+	function bossAttack():Void
+	{
+		//placeholder graphic, not final
+		var bossKnife:FlxSprite = new FlxSprite();
+		bossKnife.frames = Paths.getSparrowAtlas('KNIFE_Throw', 'shared');
+		bossKnife.animation.addByPrefix('attack', 'knive thro', 24, false);
+
+		bossKnife.antialiasing = true;
+		bossKnife.cameras = [camGame];
+		bossKnife.screenCenter();
+		bossKnife.scale.set(1,1);
+		bossKnife.y += 300;
+
+		add(bossKnife);
+
+		if (curStage == 'slackBg'){
+
+			bossKnife.animation.play('attack');
+
+			new FlxTimer().start(0.1, function(tmr:FlxTimer)
+			{
+				if(!bfDodging){
+					//dead
+					deathByKnife = true;
+					health -= 404;
+					trace('YOU are deceased.');
+				}
+			});
+		}	
 	}
 
 	function killHenchmen():Void
