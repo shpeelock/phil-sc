@@ -163,16 +163,87 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						22411.7647058824,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
-					[
 						22235.2941176471,
 						-1,
-						"spacebarWarning",
+						"Boss Attack Alert",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						22588.2352941176,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						23647.0588235294,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						24000,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						27176.4705882353,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					],
+					[
+						27529.4117647059,
+						-1,
+						"Boss Attack",
 						"",
 						""
 					]
@@ -228,16 +299,9 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						29470.5882352941,
+						34941.1764705882,
 						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
-					[
-						29294.1176470588,
-						-1,
-						"spacebarWarning",
+						"Boss Attack Alert",
 						"",
 						""
 					]
@@ -253,23 +317,23 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						30529.4117647059,
+						35294.1176470588,
 						-1,
-						"spacebarIntroTest",
+						"Boss Attack",
 						"",
 						""
 					],
 					[
-						30705.8823529412,
+						36176.4705882353,
 						-1,
-						"spacebarIntroTest",
+						"Boss Attack Alert",
 						"",
 						""
 					],
 					[
-						30352.9411764706,
+						36529.4117647059,
 						-1,
-						"spacebarWarning x2",
+						"Boss Attack",
 						"",
 						""
 					]
@@ -283,22 +347,7 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						32117.6470588235,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
-					[
-						31941.1764705882,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					]
-				],
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -310,16 +359,16 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						33000,
+						38647.0588235294,
 						-1,
-						"spacebarIntroTest",
+						"Boss Attack",
 						"",
 						""
 					],
 					[
-						32823.5294117647,
+						38294.1176470588,
 						-1,
-						"spacebarWarning",
+						"Boss Attack Alert",
 						"",
 						""
 					]
@@ -373,37 +422,22 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						45176.4705882353,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					],
+					[
+						45529.4117647059,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -415,16 +449,27 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						46411.7647058823,
+						47647.0588235294,
 						-1,
-						"spacebarIntroTest",
+						"Boss Attack Alert",
 						"",
 						""
-					],
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
 					[
-						46235.294117647,
+						48000,
 						-1,
-						"spacebarWarning",
+						"Boss Attack",
 						"",
 						""
 					]
@@ -449,67 +494,176 @@
 				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
-					[
-						49235.294117647,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					]
-				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						50470.5882352941,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
-					[
-						49411.7647058823,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
-					[
-						50294.1176470588,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					]
-				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						52058.8235294117,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
 					[
 						51882.3529411764,
 						-1,
-						"spacebarWarning",
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						51529.4117647058,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						54352.9411764705,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						53999.9999999999,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						56470.5882352941,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					],
+					[
+						56823.5294117646,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						57529.4117647058,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						57882.3529411764,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						58588.2352941176,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					],
+					[
+						58941.1764705882,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						60529.4117647058,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						60176.4705882352,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						61235.294117647,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					],
+					[
+						61588.2352941176,
+						-1,
+						"Boss Attack",
 						"",
 						""
 					]
@@ -543,105 +697,6 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						56294.1176470588,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
-					[
-						55235.294117647,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
-					[
-						55058.8235294117,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					],
-					[
-						56117.6470588235,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					]
-				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
 				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
@@ -664,16 +719,16 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						68470.588235294,
+						68647.0588235293,
 						-1,
-						"spacebarIntroTest",
+						"Boss Attack",
 						"",
 						""
 					],
 					[
 						68294.1176470588,
 						-1,
-						"spacebarWarning",
+						"Boss Attack Alert",
 						"",
 						""
 					]
@@ -688,95 +743,17 @@
 				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
-					[
-						69882.3529411764,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
-					[
-						70235.294117647,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					],
-					[
-						70411.7647058823,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					],
 					[
 						69705.8823529411,
 						-1,
-						"spacebarWarning",
-						"",
-						""
-					]
-				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						71823.5294117646,
-						-1,
-						"spacebarIntroTest",
+						"Boss Attack Alert",
 						"",
 						""
 					],
 					[
-						71647.0588235293,
+						70058.8235294117,
 						-1,
-						"spacebarWarning",
-						"",
-						""
-					]
-				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						72705.8823529411,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
-					[
-						72529.4117647058,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					],
-					[
-						72882.3529411764,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					],
-					[
-						73058.8235294117,
-						-1,
-						"spacebarIntroTest",
+						"Boss Attack",
 						"",
 						""
 					]
@@ -802,9 +779,44 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						76058.8235294117,
+						73058.8235294117,
 						-1,
-						"spacebarWarning",
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						72705.8823529411,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						75882.3529411764,
+						-1,
+						"Boss Attack Alert",
 						"",
 						""
 					]
@@ -822,7 +834,87 @@
 					[
 						76235.294117647,
 						-1,
-						"spacebarIntroTest",
+						"Boss Attack",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						81352.9411764705,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						80999.9999999999,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						84176.4705882352,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						83823.5294117646,
+						-1,
+						"Boss Attack Alert",
 						"",
 						""
 					]
@@ -838,48 +930,147 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						77823.5294117646,
+						85941.1764705881,
 						-1,
-						"spacebarWarning",
-						"",
-						""
-					],
-					[
-						77999.9999999999,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
-					[
-						78176.4705882352,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					],
-					[
-						78352.9411764705,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
-					[
-						78705.8823529411,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
-					[
-						78529.4117647058,
-						-1,
-						"spacebarWarning",
+						"Boss Attack Alert",
 						"",
 						""
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						86294.1176470587,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						88764.7058823528,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						89117.6470588234,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						91235.2941176469,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						90882.3529411763,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						93705.882352941,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					],
+					[
+						94058.8235294116,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					]
+				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -919,239 +1110,32 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						87352.9411764705,
+						102000,
 						-1,
-						"spacebarWarning",
-						"",
-						""
-					]
-				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						87529.4117647058,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					]
-				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						90705.882352941,
-						-1,
-						"spacebarIntroTest",
+						"Boss Attack",
 						"",
 						""
 					],
-					[
-						91411.7647058822,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
-					[
-						90491.9117647058,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					],
-					[
-						91191.1764705881,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					]
-				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						92470.588235294,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
-					[
-						92247.7941176469,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					]
-				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						94235.2941176469,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					],
-					[
-						94008.088235294,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					]
-				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						97764.7058823528,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					],
-					[
-						97530.882352941,
-						-1,
-						"spacebarIntroTest",
-						"",
-						""
-					]
-				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						101408.823529412,
-						-1,
-						"spacebarWarning",
-						"",
-						""
-					]
-				],
-				"bpm": 0,
-				"changeBPM": false,
-				"mustHitSection": false
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [
 					[
 						101647.058823529,
 						-1,
-						"spacebarIntroTest",
+						"Boss Attack Alert",
+						"",
+						""
+					],
+					[
+						102352.94117647,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					],
+					[
+						102705.882352941,
+						-1,
+						"Boss Attack",
 						"",
 						""
 					]
@@ -1165,7 +1149,22 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						103411.764705882,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						103058.823529412,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -1175,7 +1174,29 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						104470.588235294,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					],
+					[
+						104823.529411765,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						105529.411764706,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -1185,7 +1206,29 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						105882.352941176,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						106235.294117647,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					],
+					[
+						106588.235294117,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -1195,7 +1238,29 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						107647.058823529,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						107294.117647059,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					],
+					[
+						108352.94117647,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -1205,7 +1270,29 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						108705.882352941,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						109764.705882353,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						109411.764705882,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -1215,7 +1302,29 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						110470.588235294,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					],
+					[
+						110823.529411765,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						111176.470588235,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -1225,7 +1334,29 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						111529.411764706,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					],
+					[
+						111882.352941176,
+						-1,
+						"Boss Attack Alert",
+						"",
+						""
+					],
+					[
+						112235.294117647,
+						-1,
+						"Boss Attack",
+						"",
+						""
+					]
+				],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
@@ -1327,20 +1458,90 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						125823.529411764,
+						126176.470588235,
 						-1,
-						"spacebarWarning",
+						"Boss Attack",
 						"",
 						""
 					],
 					[
-						126000,
+						125823.529411764,
 						-1,
-						"spacebarIntroTest",
+						"Boss Attack Alert",
 						"",
 						""
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false

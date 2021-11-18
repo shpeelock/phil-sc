@@ -1094,18 +1094,24 @@ class PlayState extends MusicBeatState
 		});
 	}
 
-	function spacebarWarningDouble():Void {
-		var	spacebarPrepareDouble = new FlxText(0, 0, 500); // x, y, width
-		spacebarPrepareDouble.text = "DODGE!! x2";
-		spacebarPrepareDouble.setFormat(Paths.font("vcr.ttf"), 50, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		spacebarPrepareDouble.setBorderStyle(OUTLINE, FlxColor.RED, 1);
-		spacebarPrepareDouble.alpha = 1;
-		spacebarPrepareDouble.cameras = [camHUD];
-		spacebarPrepareDouble.screenCenter();
-		add(spacebarPrepareDouble);
+	function AttackWarning():Void {
+		var warningSound:FlxSound = new FlxSound().loadEmbedded(Paths.sound('bossAttackAlert'));
+		warningSound.volume = 10;
+
+		var	attackPrepare = new FlxText(0, 0, 500); // x, y, width
+		attackPrepare.text = "!";
+		attackPrepare.setFormat(Paths.font("vcr.ttf"), 100, FlxColor.BLACK, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.RED);
+		attackPrepare.setBorderStyle(OUTLINE, FlxColor.RED, 1);
+		attackPrepare.alpha = 1;
+		attackPrepare.cameras = [camHUD];
+		attackPrepare.screenCenter();
+
+		add(attackPrepare);
+		warningSound.play();
+
 		new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
-				FlxTween.tween(spacebarPrepareDouble, {alpha: 0}, Conductor.stepCrochet * 10 / 1000, {ease: FlxEase.quadOut});
+				FlxTween.tween(attackPrepare, {alpha: 0}, Conductor.stepCrochet * 10 / 1000, {ease: FlxEase.quadOut});
 		});
 	}
 
@@ -2689,14 +2695,11 @@ class PlayState extends MusicBeatState
 			case 'Kill Henchmen':
 				killHenchmen();
 
-			case 'spacebarIntroTest':
+			case 'Boss Attack':
 				bossAttack();
 
-			case 'spacebarWarning':
-				spacebarWarning();
-
-			case 'spacebarWarning x2':
-				spacebarWarningDouble();
+			case 'Boss Attack Alert':
+				AttackWarning();
 
 			case 'Add Camera Zoom':
 				if(ClientPrefs.camZooms && FlxG.camera.zoom < 1.35) {
@@ -3342,11 +3345,11 @@ class PlayState extends MusicBeatState
 
 				boyfriend.playAnim('dodge');
 
-				new FlxTimer().start(0.600, function(tmr:FlxTimer)
+				new FlxTimer().start(0.330, function(tmr:FlxTimer)
 				{
 					bfDodging = false;
 					trace('DODGE END!');
-					new FlxTimer().start(0.125, function(tmr:FlxTimer)
+					new FlxTimer().start(0.05, function(tmr:FlxTimer)
 					{
 						bfCanDodge = true;
 						trace('DODGE RECHARGED!');
@@ -3812,6 +3815,12 @@ class PlayState extends MusicBeatState
 
 	function bossAttack():Void
 	{
+
+		spacebarWarning();
+
+		var ded:FlxSound = new FlxSound().loadEmbedded(Paths.sound('BF_KnifeDeath'));
+		ded.volume = 1;
+
 		//placeholder graphic, not final
 		var bossKnife:FlxSprite = new FlxSprite();
 		bossKnife.frames = Paths.getSparrowAtlas('KNIFE_Throw', 'shared');
@@ -3832,9 +3841,9 @@ class PlayState extends MusicBeatState
 			new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
 				if(!bfDodging){
-					//dead
 					deathByKnife = true;
-					health -= 404;
+					ded.play();
+					health -= 0.8; //imma try something less punishing
 					trace('YOU are deceased.');
 				}
 			});
