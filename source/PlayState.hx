@@ -182,6 +182,9 @@ class PlayState extends MusicBeatState
 	var halloweenBG:BGSprite;
 	var halloweenWhite:BGSprite;
 
+	var warningSound:FlxSound = new FlxSound().loadEmbedded(Paths.sound('bossAttackAlert'));
+	var bossKnife:FlxSprite = new FlxSprite();
+
 	var phillyCityLights:FlxTypedGroup<BGSprite>;
 	var phillyTrain:BGSprite;
 	var blammedLightsBlack:ModchartSprite;
@@ -395,6 +398,12 @@ class PlayState extends MusicBeatState
 				add(bg);
 
 			case 'slackBg':
+
+				//NOTE i have no idea if this is going to work
+
+				add(warningSound);
+				warningSound.volume = 20;
+				
 				var hell:BGSprite = new BGSprite('slackBg', 0, 0, 1.2, 1.2);
 				hell.antialiasing = true;
 				hell.screenCenter();
@@ -406,6 +415,17 @@ class PlayState extends MusicBeatState
 				hellplatforms.scale.set(1.95,1.95);
 				add(hellplatforms);
 
+				bossKnife.antialiasing = true;
+				bossKnife.cameras = [camGame];
+				bossKnife.screenCenter();
+				bossKnife.scale.set(1,1);
+				bossKnife.y += 300;
+
+				bossKnife.frames = Paths.getSparrowAtlas('KNIFE_Throw', 'shared');
+				bossKnife.animation.addByPrefix('attack', 'knive thro', 24, false);
+
+				add(bossKnife);
+		
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
 					halloweenBG = new BGSprite('halloween_bg', -200, -100, ['halloweem bg0', 'halloweem bg lightning strike']);
@@ -1082,7 +1102,7 @@ class PlayState extends MusicBeatState
 	function spacebarWarning():Void {
 		var	spacebarPrepare = new FlxText(0, 0, 500); // x, y, width
 		spacebarPrepare.text = "DODGE!!";
-		spacebarPrepare.setFormat(Paths.font("vcr.ttf"), 50, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		spacebarPrepare.setFormat(Paths.font("vcr.ttf"), 80, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		spacebarPrepare.setBorderStyle(OUTLINE, FlxColor.RED, 1);
 		spacebarPrepare.alpha = 1;
 		spacebarPrepare.cameras = [camHUD];
@@ -1095,12 +1115,10 @@ class PlayState extends MusicBeatState
 	}
 
 	function AttackWarning():Void {
-		var warningSound:FlxSound = new FlxSound().loadEmbedded(Paths.sound('bossAttackAlert'));
-		warningSound.volume = 10;
 
 		var	attackPrepare = new FlxText(0, 0, 500); // x, y, width
 		attackPrepare.text = "!";
-		attackPrepare.setFormat(Paths.font("vcr.ttf"), 100, FlxColor.BLACK, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.RED);
+		attackPrepare.setFormat(Paths.font("vcr.ttf"), 160, FlxColor.BLACK, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.RED);
 		attackPrepare.setBorderStyle(OUTLINE, FlxColor.RED, 1);
 		attackPrepare.alpha = 1;
 		attackPrepare.cameras = [camHUD];
@@ -3822,17 +3840,6 @@ class PlayState extends MusicBeatState
 		ded.volume = 1;
 
 		//placeholder graphic, not final
-		var bossKnife:FlxSprite = new FlxSprite();
-		bossKnife.frames = Paths.getSparrowAtlas('KNIFE_Throw', 'shared');
-		bossKnife.animation.addByPrefix('attack', 'knive thro', 24, false);
-
-		bossKnife.antialiasing = true;
-		bossKnife.cameras = [camGame];
-		bossKnife.screenCenter();
-		bossKnife.scale.set(1,1);
-		bossKnife.y += 300;
-
-		add(bossKnife);
 
 		if (curStage == 'slackBg'){
 
