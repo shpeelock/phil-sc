@@ -184,6 +184,7 @@ class PlayState extends MusicBeatState
 
 	var warningSound:FlxSound = new FlxSound().loadEmbedded(Paths.sound('bossAttackAlert'));
 	var bossKnife:FlxSprite = new FlxSprite();
+	var boss:FlxSprite = new FlxSprite();
 
 	var phillyCityLights:FlxTypedGroup<BGSprite>;
 	var phillyTrain:BGSprite;
@@ -399,21 +400,8 @@ class PlayState extends MusicBeatState
 
 			case 'slackBg':
 
-				//NOTE i have no idea if this is going to work
-
-				add(warningSound);
-				warningSound.volume = 20;
-				
-				var hell:BGSprite = new BGSprite('slackBg', 0, 0, 1.2, 1.2);
-				hell.antialiasing = true;
-				hell.screenCenter();
-				hell.scale.set(1.5,1.5);
-				add(hell);
-
-				var hellplatforms = new BGSprite('hellPlatforms', 400, 1090, 1, 1);
-				hellplatforms.antialiasing = true;
-				hellplatforms.scale.set(1.95,1.95);
-				add(hellplatforms);
+				//NOTE TO SELF: deez n
+				warningSound.volume = 50;
 
 				bossKnife.antialiasing = true;
 				bossKnife.cameras = [camGame];
@@ -421,10 +409,41 @@ class PlayState extends MusicBeatState
 				bossKnife.scale.set(1,1);
 				bossKnife.y += 300;
 
-				bossKnife.frames = Paths.getSparrowAtlas('KNIFE_Throw', 'shared');
-				bossKnife.animation.addByPrefix('attack', 'knive thro', 24, false);
+				bossKnife.frames = Paths.getSparrowAtlas('bossKnife', 'shared');
+				bossKnife.animation.addByPrefix('attack', 'boss knife', 24, false);
+				
+				var hell:BGSprite = new BGSprite('slackBg', 0, 0, 1.2, 1.2);
+				hell.antialiasing = true;
+				hell.screenCenter();
+				hell.scale.set(1.5,1.5);
+
+				add(hell);
+
+				boss.antialiasing = true;
+				boss.cameras = [camGame];
+				boss.screenCenter();
+				boss.scale.set(2,2);
+
+				boss.frames = Paths.getSparrowAtlas('Boss', 'shared');
+				boss.animation.addByPrefix('idle', 'Idle', 24, true);
+				boss.animation.addByPrefix('attack', 'attack', 24, false);
+
+				boss.x -= 1600;
+				boss.y -= 550;
+
+				boss.animation.play('idle');
+
+				var hellplatforms = new BGSprite('hellPlatforms', 400, 1090, 1, 1);
+				hellplatforms.antialiasing = true;
+				hellplatforms.scale.set(1.95,1.95);
+
+				add(hellplatforms);
 
 				add(bossKnife);
+
+				add(boss);
+
+				add(warningSound);
 		
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
@@ -3831,6 +3850,13 @@ class PlayState extends MusicBeatState
 		}
 	}
 
+	function bossAttackAnimation(){
+		boss.animation.play('attack', true);
+		new FlxTimer().start(0.3, function(tmr:FlxTimer){
+			boss.animation.play('idle', true);
+		});
+	}
+
 	function bossAttack():Void
 	{
 
@@ -3845,13 +3871,30 @@ class PlayState extends MusicBeatState
 
 			bossKnife.animation.play('attack');
 
+			bossAttackAnimation();
+
+			if(cpuControlled){
+				boyfriend.playAnim('dodge');
+			}
+
 			new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
-				if(!bfDodging){
-					deathByKnife = true;
-					ded.play();
-					health -= 0.8; //imma try something less punishing
-					trace('YOU are deceased.');
+				//botplay check
+				if(cpuControlled){
+					deathByKnife = false;
+					health -= 0;
+					boss.animation.play('idle', true);
+					trace('using botplay');
+				}
+				else
+				{
+					if(!bfDodging){
+						deathByKnife = true;
+						ded.play();
+						health -= 0.8; //no insta kill everyone's sanity
+						boss.animation.play('idle', true);
+						trace('YOU are deceased.');
+					}
 				}
 			});
 		}	
