@@ -401,13 +401,15 @@ class PlayState extends MusicBeatState
 			case 'slackBg':
 
 				//NOTE TO SELF: deez n
-				warningSound.volume = 50;
+				warningSound.volume = 20;
 
 				bossKnife.antialiasing = true;
 				bossKnife.cameras = [camGame];
 				bossKnife.screenCenter();
 				bossKnife.scale.set(1,1);
 				bossKnife.y += 300;
+				//why you built like that
+				//bossknife.alpha = 0;
 
 				bossKnife.frames = Paths.getSparrowAtlas('bossKnife', 'shared');
 				bossKnife.animation.addByPrefix('attack', 'boss knife', 24, false);
@@ -3865,11 +3867,16 @@ class PlayState extends MusicBeatState
 		var ded:FlxSound = new FlxSound().loadEmbedded(Paths.sound('BF_KnifeDeath'));
 		ded.volume = 1;
 
-		//placeholder graphic, not final
+		var bossfire:FlxSound = new FlxSound().loadEmbedded(Paths.sound('bossFire'));
+		bossfire.volume = 0.5;
 
 		if (curStage == 'slackBg'){
 
 			bossKnife.animation.play('attack');
+
+			bossKnife.alpha = 1;
+
+			bossfire.play();
 
 			bossAttackAnimation();
 

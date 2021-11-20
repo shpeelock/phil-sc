@@ -2,19 +2,19 @@
 <TextureAtlas imagePath="bossKnife.png">
 	<!-- Created with Adobe Animate version 21.0.6.41649 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="boss knife0000" x="1370" y="266" width="499" height="104" frameX="0" frameY="-157" frameWidth="2135" frameHeight="398"/>
-	<SubTexture name="boss knife0001" x="760" y="313" width="499" height="104" frameX="0" frameY="-157" frameWidth="2135" frameHeight="398"/>
-	<SubTexture name="boss knife0002" x="0" y="0" width="350" height="339" frameX="-534" frameY="-41" frameWidth="2135" frameHeight="398"/>
-	<SubTexture name="boss knife0003" x="380" y="0" width="350" height="339" frameX="-534" frameY="-41" frameWidth="2135" frameHeight="398"/>
-	<SubTexture name="boss knife0004" x="1916" y="0" width="83" height="398" frameX="-1075" frameY="0" frameWidth="2135" frameHeight="398"/>
-	<SubTexture name="boss knife0005" x="254" y="369" width="83" height="398" frameX="-1075" frameY="0" frameWidth="2135" frameHeight="398"/>
-	<SubTexture name="boss knife0006" x="760" y="0" width="275" height="283" frameX="-1299" frameY="-45" frameWidth="2135" frameHeight="398"/>
-	<SubTexture name="boss knife0007" x="1065" y="0" width="275" height="283" frameX="-1299" frameY="-45" frameWidth="2135" frameHeight="398"/>
-	<SubTexture name="boss knife0008" x="367" y="369" width="331" height="69" frameX="-1529" frameY="-157" frameWidth="2135" frameHeight="398"/>
-	<SubTexture name="boss knife0009" x="1289" y="400" width="331" height="69" frameX="-1529" frameY="-157" frameWidth="2135" frameHeight="398"/>
-	<SubTexture name="boss knife0010" x="1370" y="0" width="243" height="236" frameX="-1761" frameY="-67" frameWidth="2135" frameHeight="398"/>
-	<SubTexture name="boss knife0011" x="1643" y="0" width="243" height="236" frameX="-1761" frameY="-67" frameWidth="2135" frameHeight="398"/>
-	<SubTexture name="boss knife0012" x="1650" y="400" width="63" height="297" frameX="-1951" frameY="-33" frameWidth="2135" frameHeight="398"/>
-	<SubTexture name="boss knife0013" x="1743" y="400" width="63" height="297" frameX="-1951" frameY="-33" frameWidth="2135" frameHeight="398"/>
-	<SubTexture name="boss knife0014" x="0" y="369" width="224" height="231" frameX="-1911" frameY="-73" frameWidth="2135" frameHeight="398"/>
+	<SubTexture name="boss knife0000" x="1107" y="395" width="499" height="104" frameX="0" frameY="-157" frameWidth="2136" frameHeight="405"/>
+	<SubTexture name="boss knife0001" x="380" y="0" width="454" height="230" frameX="-260" frameY="-93" frameWidth="2136" frameHeight="405"/>
+	<SubTexture name="boss knife0002" x="0" y="0" width="350" height="339" frameX="-534" frameY="-41" frameWidth="2136" frameHeight="405"/>
+	<SubTexture name="boss knife0003" x="864" y="0" width="213" height="387" frameX="-811" frameY="-18" frameWidth="2136" frameHeight="405"/>
+	<SubTexture name="boss knife0004" x="1899" y="0" width="83" height="398" frameX="-1075" frameY="0" frameWidth="2136" frameHeight="405"/>
+	<SubTexture name="boss knife0005" x="1411" y="0" width="185" height="365" frameX="-1194" frameY="-9" frameWidth="2136" frameHeight="405"/>
+	<SubTexture name="boss knife0006" x="1107" y="0" width="274" height="283" frameX="-1299" frameY="-45" frameWidth="2136" frameHeight="405"/>
+	<SubTexture name="boss knife0007" x="380" y="260" width="317" height="175" frameX="-1410" frameY="-98" frameWidth="2136" frameHeight="405"/>
+	<SubTexture name="boss knife0008" x="338" y="465" width="331" height="69" frameX="-1529" frameY="-157" frameWidth="2136" frameHeight="405"/>
+	<SubTexture name="boss knife0009" x="0" y="369" width="308" height="156" frameX="-1644" frameY="-111" frameWidth="2136" frameHeight="405"/>
+	<SubTexture name="boss knife0010" x="1626" y="0" width="243" height="236" frameX="-1761" frameY="-67" frameWidth="2136" frameHeight="405"/>
+	<SubTexture name="boss knife0011" x="727" y="417" width="154" height="278" frameX="-1868" frameY="-42" frameWidth="2136" frameHeight="405"/>
+	<SubTexture name="boss knife0012" x="1889" y="428" width="63" height="297" frameX="-1952" frameY="-40" frameWidth="2136" frameHeight="405"/>
+	<SubTexture name="boss knife0013" x="911" y="417" width="144" height="284" frameX="-1940" frameY="-50" frameWidth="2136" frameHeight="405"/>
+	<SubTexture name="boss knife0014" x="1636" y="266" width="223" height="230" frameX="-1913" frameY="-80" frameWidth="2136" frameHeight="405"/>
 </TextureAtlas>
