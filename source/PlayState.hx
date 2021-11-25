@@ -409,7 +409,7 @@ class PlayState extends MusicBeatState
 				bossKnife.scale.set(1,1);
 				bossKnife.y += 300;
 				//why you built like that
-				//bossknife.alpha = 0;
+				bossKnife.alpha = 0;
 
 				bossKnife.frames = Paths.getSparrowAtlas('bossKnife', 'shared');
 				bossKnife.animation.addByPrefix('attack', 'boss knife', 24, false);
