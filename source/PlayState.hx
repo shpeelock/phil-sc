@@ -182,7 +182,6 @@ class PlayState extends MusicBeatState
 	var halloweenBG:BGSprite;
 	var halloweenWhite:BGSprite;
 
-	var warningSound:FlxSound = new FlxSound().loadEmbedded(Paths.sound('bossAttackAlert'));
 	var bossKnife:FlxSprite = new FlxSprite();
 	var boss:FlxSprite = new FlxSprite();
 
@@ -211,6 +210,7 @@ class PlayState extends MusicBeatState
 	var upperBoppers:BGSprite;
 	var bottomBoppers:BGSprite;
 	var santa:BGSprite;
+	var philScared:BGSprite;
 	var heyTimer:Float;
 
 	public static var deathByKnife:Bool = false;
@@ -398,10 +398,26 @@ class PlayState extends MusicBeatState
 				bg.scale.set(1.25, 1.25);
 				add(bg);
 
+			case 'workerBg':
+
+				var bg:BGSprite = new BGSprite('workerBg', 0, 0, 1, 1);
+				bg.antialiasing = true;
+				add(bg);
+
+				var ground:BGSprite = new BGSprite('workerGround', -0.5, 587.7, 1, 1);
+				ground.antialiasing = true;
+				add(ground);
+
+				var lamp:BGSprite = new BGSprite('workerLamp', 92.7, 112.1, 1, 1);
+				lamp.antialiasing = true;
+				add(lamp);
+
+				philScared = new BGSprite('phil-scared', 149.75, 317, 1, 1, ['phil idle in fear']);
+				add(philScared);
+
 			case 'slackBg':
 
 				//NOTE TO SELF: deez n
-				warningSound.volume = 20;
 
 				bossKnife.antialiasing = true;
 				bossKnife.cameras = [camGame];
@@ -445,8 +461,7 @@ class PlayState extends MusicBeatState
 
 				add(boss);
 
-				add(warningSound);
-		
+
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
 					halloweenBG = new BGSprite('halloween_bg', -200, -100, ['halloweem bg0', 'halloweem bg lightning strike']);
@@ -815,6 +830,8 @@ class PlayState extends MusicBeatState
 				gf.visible = false;
 			case 'slackBg':
 				gf.visible = false;
+			case 'workerBg':
+				gf.visible = false;
 		}
 
 		var file:String = Paths.json(songName + '/dialogue'); //Checks for json/Psych Engine dialogue
@@ -1137,6 +1154,10 @@ class PlayState extends MusicBeatState
 
 	function AttackWarning():Void {
 
+		var warningSound:FlxSound = new FlxSound().loadEmbedded(Paths.sound('bossAttackAlert'));
+		
+		warningSound.volume = 20;
+
 		var	attackPrepare = new FlxText(0, 0, 500); // x, y, width
 		attackPrepare.text = "!";
 		attackPrepare.setFormat(Paths.font("vcr.ttf"), 160, FlxColor.BLACK, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.RED);
@@ -1453,8 +1474,12 @@ class PlayState extends MusicBeatState
 					santa.dance(true);
 				}
 
-				if (curStage == 'slackBg'){
+				if (curStage == 'slackBg' || curStage == 'workerBg'){
 					spacebarInstructions();
+				}
+
+				if(curStage == 'workerbg'){
+					philScared.dance(true);
 				}
 
 
@@ -2989,6 +3014,9 @@ class PlayState extends MusicBeatState
 	function finishSong():Void
 	{
 		var finishCallback:Void->Void = endSong; //In case you want to change it in a specific song.
+		var workerEnd:String = storyPlaylist[0].toLowerCase();
+
+
 
 		updateTime = false;
 		FlxG.sound.music.volume = 0;
@@ -3374,7 +3402,7 @@ class PlayState extends MusicBeatState
 
 	private function keyShit():Void
 	{
-		if(curStage == 'slackBg'){
+		if(curStage == 'slackBg' || curStage == 'workerBg'){
 
 			if(FlxG.keys.justPressed.SPACE){
 				trace('i am alive');
@@ -3853,10 +3881,15 @@ class PlayState extends MusicBeatState
 	}
 
 	function bossAttackAnimation(){
-		boss.animation.play('attack', true);
-		new FlxTimer().start(0.3, function(tmr:FlxTimer){
-			boss.animation.play('idle', true);
-		});
+		if (curStage == 'slackBg'){
+			boss.animation.play('attack', true);
+			new FlxTimer().start(0.3, function(tmr:FlxTimer){
+				boss.animation.play('idle', true);
+			});
+		}
+		else if (curStage == 'workerBg'){
+			dad.playAnim('attack', true);
+		}
 	}
 
 	function bossAttack():Void
@@ -3870,7 +3903,7 @@ class PlayState extends MusicBeatState
 		var bossfire:FlxSound = new FlxSound().loadEmbedded(Paths.sound('bossFire'));
 		bossfire.volume = 0.5;
 
-		if (curStage == 'slackBg'){
+		if (curStage == 'slackBg' || curStage == 'workerBg'){
 
 			bossKnife.animation.play('attack');
 
@@ -4071,6 +4104,9 @@ class PlayState extends MusicBeatState
 
 				if(heyTimer <= 0) bottomBoppers.dance(true);
 				santa.dance(true);
+
+			case 'workerBg':
+				philScared.dance(true);
 
 			case 'limo':
 				if(!ClientPrefs.lowQuality) {
