@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="philmer-hmm.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="philmer-hmm0000" x="0" y="0" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0001" x="430" y="0" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0002" x="860" y="0" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0003" x="1290" y="0" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0004" x="1720" y="0" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0005" x="2150" y="0" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0006" x="2580" y="0" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0007" x="3010" y="0" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0008" x="3440" y="0" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0009" x="0" y="478" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0010" x="430" y="478" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0011" x="860" y="478" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0012" x="1290" y="478" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0013" x="1720" y="478" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0014" x="2150" y="478" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0015" x="2580" y="478" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0016" x="3010" y="478" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0017" x="3440" y="478" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0018" x="0" y="956" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0019" x="430" y="956" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0020" x="860" y="956" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0021" x="1290" y="956" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0022" x="1720" y="956" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0023" x="2150" y="956" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0024" x="2580" y="956" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0025" x="3010" y="956" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0026" x="3440" y="956" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0027" x="0" y="1434" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0028" x="430" y="1434" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0029" x="860" y="1434" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0030" x="1290" y="1434" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0031" x="1720" y="1434" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0032" x="2150" y="1434" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0033" x="2580" y="1434" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0034" x="3010" y="1434" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0035" x="3440" y="1434" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0036" x="0" y="1912" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0037" x="430" y="1912" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0038" x="860" y="1912" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0039" x="1290" y="1912" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0040" x="1720" y="1912" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0041" x="2150" y="1912" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0042" x="2580" y="1912" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0043" x="3010" y="1912" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0044" x="3440" y="1912" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0045" x="0" y="2390" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0046" x="430" y="2390" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0047" x="860" y="2390" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0048" x="1290" y="2390" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0049" x="1720" y="2390" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0050" x="2150" y="2390" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0051" x="2580" y="2390" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0052" x="3010" y="2390" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0053" x="3440" y="2390" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0054" x="0" y="2868" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0055" x="430" y="2868" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0056" x="860" y="2868" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0057" x="1290" y="2868" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0058" x="1720" y="2868" width="400" height="448"/>
+	<SubTexture name="philmer-hmm0059" x="2150" y="2868" width="400" height="448"/>
+</TextureAtlas>

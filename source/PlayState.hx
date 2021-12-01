@@ -184,7 +184,6 @@ class PlayState extends MusicBeatState
 
 	var bossKnife:FlxSprite = new FlxSprite();
 	var boss:FlxSprite = new FlxSprite();
-
 	var phillyCityLights:FlxTypedGroup<BGSprite>;
 	var phillyTrain:BGSprite;
 	var blammedLightsBlack:ModchartSprite;
@@ -210,7 +209,7 @@ class PlayState extends MusicBeatState
 	var upperBoppers:BGSprite;
 	var bottomBoppers:BGSprite;
 	var santa:BGSprite;
-	var philScared:BGSprite;
+	var	philScared:FlxSprite;
 	var heyTimer:Float;
 
 	public static var deathByKnife:Bool = false;
@@ -414,6 +413,8 @@ class PlayState extends MusicBeatState
 
 				philScared = new BGSprite('phil-scared', 149.75, 317, 1, 1, ['phil idle in fear']);
 				add(philScared);
+
+				philScared.animation.play('phil idle in fear', true);
 
 			case 'slackBg':
 
@@ -803,6 +804,12 @@ class PlayState extends MusicBeatState
 		dad = new Character(0, 0, SONG.player2);
 		startCharacterPos(dad, true);
 		dadGroup.add(dad);
+		
+		if (SONG.song == 'worker' && isStoryMode)
+			{
+				dad.alpha = 0.00001;
+				philScared.alpha = 0.00001;
+			}
 
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
@@ -947,7 +954,14 @@ class PlayState extends MusicBeatState
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 
 		FlxG.fixedTimestep = false;
-		moveCameraSection(0);
+
+		if (SONG.song == 'worker' && isStoryMode)
+			{
+				moveCamera(true);
+			}
+		
+		if (!isStoryMode)
+				moveCameraSection(0);
 
 		healthBarBG = new AttachedSprite('healthBar');
 		healthBarBG.y = FlxG.height * 0.89;
@@ -1092,6 +1106,78 @@ class PlayState extends MusicBeatState
 							}
 						});
 					});
+
+					case "worker":
+						healthBarBG.alpha = 0;
+						healthBar.alpha = 0;
+						iconP1.alpha = 0;
+						iconP2.alpha = 0;
+						scoreTxt.alpha = 0;
+						var city:FlxSound;
+						city = new FlxSound().loadEmbedded(Paths.sound('city'));
+						city.play();
+						FlxG.sound.list.add(city);
+						
+						var philUhh:FlxSprite;
+						philUhh = new FlxSprite(149.75, 317);
+						philUhh.frames = Paths.getSparrowAtlas('phil_cutscene/phil-uhh', 'shared');
+						philUhh.animation.addByPrefix('idle',"phil wtf is going on", 24, true);
+						philUhh.animation.addByPrefix('shit',"phil-ohshit", 24, false);
+						philUhh.animation.play('idle');
+						philUhh.antialiasing = true;
+						add(philUhh);
+							
+						var engaged:FlxSprite;
+						engaged = new FlxSprite(505.85, 320.45);
+						engaged.frames = Paths.getSparrowAtlas('phil_cutscene/philmer-ready', 'shared');
+						engaged.animation.addByPrefix('idle',"philmer-ready", 24, false);
+						engaged.animation.play('idle');
+						engaged.antialiasing = true;
+	
+						var hmm:FlxSprite;
+						hmm = new FlxSprite(496.8, 322.8);
+						hmm.frames = Paths.getSparrowAtlas('phil_cutscene/philmer-hmm', 'shared');
+						hmm.animation.addByPrefix('idle',"philmer-hmm", 24, false);
+						hmm.animation.play('idle');
+						hmm.antialiasing = true;
+						add(hmm);
+	
+						hmm.animation.callback = function(idle, frameNumber:Int, frameIndex:Int)
+							{
+								if (frameNumber == 35)
+									{
+										FlxG.sound.play(Paths.sound('bfBeep'));
+										boyfriend.playAnim('singLEFT');
+										camFollow.x += 150;
+										city.fadeOut(4,0);
+									}
+								if (frameNumber == 55)
+									{
+										remove(hmm);
+										camFollow.x -= 150;
+										add(engaged);
+										philUhh.animation.play('shit');
+									}
+									
+							}
+	
+						engaged.animation.finishCallback = function(idle)
+							{
+								remove(engaged);
+								remove(philUhh);
+								philScared.alpha = 1;
+								philScared.animation.play('phil idle in fear', true);
+								dad.alpha = 1;
+								startCountdown();
+								if (!ClientPrefs.hideHud)
+									{
+										FlxTween.tween(scoreTxt, {alpha: 1}, (Conductor.stepCrochet * 16 / 1000), {ease: FlxEase.quadInOut});
+										FlxTween.tween(iconP1, {alpha: 1}, (Conductor.stepCrochet * 16 / 1000), {ease: FlxEase.quadInOut});
+										FlxTween.tween(iconP2, {alpha: 1}, (Conductor.stepCrochet * 16 / 1000), {ease: FlxEase.quadInOut});
+										FlxTween.tween(healthBar, {alpha: 1}, (Conductor.stepCrochet * 16 / 1000), {ease: FlxEase.quadInOut});
+										FlxTween.tween(healthBarBG, {alpha: 1}, (Conductor.stepCrochet * 16 / 1000), {ease: FlxEase.quadInOut});
+									}
+							}
 				case 'senpai' | 'roses' | 'thorns':
 					if(daSong == 'roses') FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
@@ -1100,7 +1186,11 @@ class PlayState extends MusicBeatState
 					startCountdown();
 			}
 			seenCutscene = true;
-		} else {
+		} else if (curSong == 'worker') {
+			dad.alpha = 1;
+			philScared.alpha = 1;
+			startCountdown();
+		}else{
 			startCountdown();
 		}
 		RecalculateRating();
@@ -1477,11 +1567,6 @@ class PlayState extends MusicBeatState
 				if (curStage == 'slackBg' || curStage == 'workerBg'){
 					spacebarInstructions();
 				}
-
-				if(curStage == 'workerbg'){
-					philScared.dance(true);
-				}
-
 
 				switch (swagCounter)
 				{
@@ -3932,8 +4017,9 @@ class PlayState extends MusicBeatState
 						deathByKnife = true;
 						ded.play();
 						health -= 0.8; //no insta kill everyone's sanity
+						boyfriend.playAnim('hit');
 						boss.animation.play('idle', true);
-						trace('YOU are deceased.');
+						trace('ouch');
 					}
 				}
 			});
@@ -4104,9 +4190,6 @@ class PlayState extends MusicBeatState
 
 				if(heyTimer <= 0) bottomBoppers.dance(true);
 				santa.dance(true);
-
-			case 'workerBg':
-				philScared.dance(true);
 
 			case 'limo':
 				if(!ClientPrefs.lowQuality) {

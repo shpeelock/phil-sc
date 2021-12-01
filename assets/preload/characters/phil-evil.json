@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				-23,
+				-28,
 				-217
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "evil philmer right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "evil philmer right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				21,
 				-221
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "evil philmer down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "evil philmer down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-200
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "evil philmer idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "evil philmer idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				25,
 				-151
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "evil philmer up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "evil philmer up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				19,
 				-191
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "evil philmer left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "evil philmer left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				21,
 				-202
 			],
-			"anim": "attack",
+			"loop": false,
 			"fps": 24,
-			"name": "evil philmer attack",
-			"indices": []
+			"anim": "attack",
+			"indices": [],
+			"name": "evil philmer attack"
 		}
 	],
 	"no_antialiasing": false,
@@ -73,12 +73,12 @@
 		0,
 		0
 	],
-	"healthicon": "phil",
+	"healthicon": "phil-evil",
 	"flip_x": false,
 	"healthbar_colors": [
-		28,
-		117,
-		25
+		19,
+		5,
+		61
 	],
 	"camera_position": [
 		-20,
