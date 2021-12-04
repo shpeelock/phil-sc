@@ -209,7 +209,7 @@ class PlayState extends MusicBeatState
 	var upperBoppers:BGSprite;
 	var bottomBoppers:BGSprite;
 	var santa:BGSprite;
-	var	philScared:FlxSprite;
+	var	philScared:BGSprite;
 	var heyTimer:Float;
 
 	public static var deathByKnife:Bool = false;
@@ -1128,14 +1128,14 @@ class PlayState extends MusicBeatState
 						add(philUhh);
 							
 						var engaged:FlxSprite;
-						engaged = new FlxSprite(505.85, 320.45);
+						engaged = new FlxSprite(459.8, 306);
 						engaged.frames = Paths.getSparrowAtlas('phil_cutscene/philmer-ready', 'shared');
 						engaged.animation.addByPrefix('idle',"philmer-ready", 24, false);
 						engaged.animation.play('idle');
 						engaged.antialiasing = true;
 	
 						var hmm:FlxSprite;
-						hmm = new FlxSprite(496.8, 322.8);
+						hmm = new FlxSprite(505.95, 320.3);
 						hmm.frames = Paths.getSparrowAtlas('phil_cutscene/philmer-hmm', 'shared');
 						hmm.animation.addByPrefix('idle',"philmer-hmm", 24, false);
 						hmm.animation.play('idle');
@@ -1166,7 +1166,7 @@ class PlayState extends MusicBeatState
 								remove(engaged);
 								remove(philUhh);
 								philScared.alpha = 1;
-								philScared.animation.play('phil idle in fear', true);
+								philScared.dance(true);
 								dad.alpha = 1;
 								startCountdown();
 								if (!ClientPrefs.hideHud)
@@ -1236,6 +1236,7 @@ class PlayState extends MusicBeatState
 		spacebarPrepare.cameras = [camHUD];
 		spacebarPrepare.screenCenter();
 		add(spacebarPrepare);
+		FlxG.camera.shake(0.01, 0.1);
 		new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
 				FlxTween.tween(spacebarPrepare, {alpha: 0}, Conductor.stepCrochet * 10 / 1000, {ease: FlxEase.quadOut});
@@ -1567,6 +1568,10 @@ class PlayState extends MusicBeatState
 				if (curStage == 'slackBg' || curStage == 'workerBg'){
 					spacebarInstructions();
 				}
+
+				/*if(curStage == 'workerBg'){
+					philScared.dance(true);
+				}*/
 
 				switch (swagCounter)
 				{
@@ -2280,8 +2285,14 @@ class PlayState extends MusicBeatState
 			iconP1.animation.curAnim.curFrame = 0;
 
 		if (healthBar.percent > 80)
-			iconP2.animation.curAnim.curFrame = 1;
+			{
+				iconP2.animation.curAnim.curFrame = 1;
+				iconP2.camera.shake(0.01);
+			}
 		else
+		{
+			
+		}
 			iconP2.animation.curAnim.curFrame = 0;
 
 		if (FlxG.keys.justPressed.EIGHT && !endingSong && !inCutscene) {
@@ -4190,6 +4201,9 @@ class PlayState extends MusicBeatState
 
 				if(heyTimer <= 0) bottomBoppers.dance(true);
 				santa.dance(true);
+
+			/*case 'workerBg':
+				philScared.dance(true);*/
 
 			case 'limo':
 				if(!ClientPrefs.lowQuality) {
