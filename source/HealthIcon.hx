@@ -1,5 +1,6 @@
 package;
 
+import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.FlxSprite;
 import openfl.utils.Assets as OpenFlAssets;
 
@@ -10,7 +11,10 @@ class HealthIcon extends FlxSprite
 	public var sprTracker:FlxSprite;
 	private var isOldIcon:Bool = false;
 	private var isPlayer:Bool = false;
-	private var char:String = '';
+	public var char:String = '';
+
+	public var offsetX = 0;
+	public var offsetY = 0;
 
 	public function new(char:String = 'bf', isPlayer:Bool = false)
 	{
@@ -36,6 +40,18 @@ class HealthIcon extends FlxSprite
 
 	public function changeIcon(char:String) {
 		if(this.char != char) {
+			offsetX = 0;
+			offsetY = 0;
+			switch (char) 
+			{
+				case 'little-man':
+					var file:FlxAtlasFrames = Paths.getSparrowAtlas('icons/littlemnan icon');
+					frames = file;
+					
+					animation.addByPrefix(char, 'little man icon', 24, true);
+					animation.play(char);
+
+			default:
 			var name:String = 'icons/' + char;
 			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-' + char; //Older versions of psych engine's support
 			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
@@ -52,6 +68,7 @@ class HealthIcon extends FlxSprite
 			}
 		}
 	}
+}
 
 	public function getCharacter():String {
 		return char;

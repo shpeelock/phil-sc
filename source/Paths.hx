@@ -74,6 +74,16 @@ class Paths
 		currentLevel = name.toLowerCase();
 	}
 
+	inline static public function getUsersDesktop() // Get the path of the users desktop cus smartass i am.
+		{
+			var envs = Sys.environment();
+			if (envs.exists('USERNAME')) {
+				var USERNAME = envs['USERNAME'];
+				return 'C:/Users/$USERNAME/Desktop'; 
+			}
+			else return null; 
+		}
+
 	public static function getPath(file:String, type:AssetType, ?library:Null<String> = null)
 	{
 		if (library != null)

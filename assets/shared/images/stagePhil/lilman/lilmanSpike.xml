@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="lilmanSpike.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="spike rise0000" x="0" y="0" width="610" height="887"/>
+	<SubTexture name="spike rise0001" x="0" y="917" width="610" height="887"/>
+	<SubTexture name="spike rise0002" x="0" y="1834" width="610" height="887"/>
+	<SubTexture name="spike rise0003" x="0" y="2751" width="610" height="887"/>
+	<SubTexture name="spike rise0004" x="640" y="0" width="610" height="887"/>
+	<SubTexture name="spike rise0005" x="1280" y="0" width="610" height="887"/>
+	<SubTexture name="spike rise0006" x="1920" y="0" width="610" height="887"/>
+	<SubTexture name="spike rise0007" x="2560" y="0" width="610" height="887"/>
+	<SubTexture name="spike rise0008" x="3200" y="0" width="610" height="887"/>
+	<SubTexture name="spike rise0009" x="640" y="917" width="610" height="887"/>
+	<SubTexture name="spike rise0010" x="640" y="1834" width="610" height="887"/>
+	<SubTexture name="spike rise0011" x="640" y="2751" width="610" height="887"/>
+	<SubTexture name="spike rise0012" x="1280" y="917" width="610" height="887"/>
+	<SubTexture name="spike rise0013" x="1280" y="1834" width="610" height="887"/>
+	<SubTexture name="spike rise0014" x="1280" y="2751" width="610" height="887"/>
+	<SubTexture name="spike rise0015" x="1920" y="917" width="610" height="887"/>
+	<SubTexture name="spike rise0016" x="2560" y="917" width="610" height="887"/>
+	<SubTexture name="spike rise0017" x="3200" y="917" width="610" height="887"/>
+	<SubTexture name="spike rise0018" x="1920" y="1834" width="610" height="887"/>
+	<SubTexture name="spike rise0019" x="1920" y="2751" width="610" height="887"/>
+</TextureAtlas>

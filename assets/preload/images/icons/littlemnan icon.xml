@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="littlemnan icon.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="little man icon0000" x="0" y="0" width="150" height="150"/>
+	<SubTexture name="little man icon0001" x="0" y="150" width="150" height="150"/>
+	<SubTexture name="little man icon0002" x="0" y="300" width="150" height="150"/>
+	<SubTexture name="little man icon0003" x="150" y="0" width="150" height="150"/>
+	<SubTexture name="little man icon0004" x="150" y="150" width="150" height="150"/>
+</TextureAtlas>
