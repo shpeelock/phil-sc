@@ -1128,14 +1128,14 @@ class PlayState extends MusicBeatState
 						add(philUhh);
 							
 						var engaged:FlxSprite;
-						engaged = new FlxSprite(459.8, 306);
+						engaged = new FlxSprite(454.8, 308);
 						engaged.frames = Paths.getSparrowAtlas('phil_cutscene/philmer-ready', 'shared');
 						engaged.animation.addByPrefix('idle',"philmer-ready", 24, false);
 						engaged.animation.play('idle');
 						engaged.antialiasing = true;
 	
 						var hmm:FlxSprite;
-						hmm = new FlxSprite(505.95, 320.3);
+						hmm = new FlxSprite(502.95, 312.3);
 						hmm.frames = Paths.getSparrowAtlas('phil_cutscene/philmer-hmm', 'shared');
 						hmm.animation.addByPrefix('idle',"philmer-hmm", 24, false);
 						hmm.animation.play('idle');
