@@ -1,22 +1,25 @@
 {
-	"songs": [
-		["Spookeez", "spooky", [34, 51, 68]],
-		["South", "spooky", [34, 51, 68]],
-		["Monster", "monster", [34, 51, 68]]
-	],
-
-	"weekCharacters": [
-		"spooky",
-		"bf",
-		"gf"
-	],
-	"weekBackground": "halloween",
-
-	"storyName": "Spooky Month",
+	"storyName": "evil phil be like: i love my job",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
 	"weekBefore": "week1",
-	"weekName": "Week 2",
 	"startUnlocked": true,
-
+	"weekCharacters": [
+		"",
+		"bf",
+		""
+	],
+	"songs": [
+		[
+			"worker",
+			"phil-evil",
+			[
+				19,
+				5,
+				61
+			]
+		]
+	],
 	"hideStoryMode": false,
-	"hideFreeplay": false
+	"weekName": "Worker"
 }
