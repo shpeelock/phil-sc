@@ -433,8 +433,8 @@ class PlayState extends MusicBeatState
 				lilmanSpike.frames = Paths.getSparrowAtlas('stagePhil/lilman/lilmanSpike', 'shared');
 				lilmanSpike.animation.addByPrefix('attack', 'spike rise', 24, false);
 
-				lilmanSpike.x += 782.4;
-				lilmanSpike.y += 605.4;
+				lilmanSpike.x += 612.4;
+				lilmanSpike.y += 405.4;
 
 				add(lilmanSpike);
 				
@@ -2325,10 +2325,6 @@ class PlayState extends MusicBeatState
 		else
 			iconP2.animation.curAnim.curFrame = 0;
 
-		if (iconP2.char == 'little-man') {
-				//iconP2.animation.play(char);
-		}
-
 		if (FlxG.keys.justPressed.EIGHT && !endingSong && !inCutscene) {
 			persistentUpdate = false;
 			paused = true;
@@ -4077,13 +4073,17 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					if(!bfDodging){
+					if(!bfDodging)
+					{
 						deathByKnife = true;
 						ded.play();
 						health -= 0.8; //no insta kill everyone's sanity
-						boyfriend.playAnim('hit');
+						boyfriend.playAnim('hit', true);
 						boss.animation.play('idle', true);
 						trace('ouch');
+					}
+					else if(bfDodging = true){
+						health += 0.05;
 					}
 				}
 			});

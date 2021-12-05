@@ -49,7 +49,7 @@ class HealthIcon extends FlxSprite
 					frames = file;
 					
 					animation.addByPrefix(char, 'little man icon', 24, true);
-					animation.play(char);
+					animation.play(char, true);
 
 			default:
 			var name:String = 'icons/' + char;
