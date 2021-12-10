@@ -393,60 +393,60 @@ class PlayState extends MusicBeatState
 			case 'philBg':
 				var white:FlxSprite = new FlxSprite().makeGraphic(FlxG.width * 5000, 1000, FlxColor.WHITE);
 				add(white);
-				var bg:BGSprite = new BGSprite('stagePhil/philbg', 0, 0, 1, 1);
+				var bg:FlxSprite = new FlxSprite(-136, -179.1).loadGraphic(Paths.image('stagePhil/philbg', 'phil'));
 				bg.antialiasing = true;
-				bg.scale.set(1.25, 1.25);
 				add(bg);
+				bg.scale.set(0.7, 0.7);
 
 			case 'workerBg':
 
-				var bg:BGSprite = new BGSprite('stagePhil/worker/workerBg', 0, 0, 1, 1);
+				var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('stagePhil/worker/workerBg', 'phil'));
 				bg.antialiasing = true;
 				add(bg);
 
-				var ground:BGSprite = new BGSprite('stagePhil/worker/workerGround', -0.5, 587.7, 1, 1);
+				var ground:FlxSprite = new FlxSprite(-0.5, 587.7).loadGraphic(Paths.image('stagePhil/worker/workerGround', 'phil'));
 				ground.antialiasing = true;
 				add(ground);
 
-				var lamp:BGSprite = new BGSprite('stagePhil/worker/workerLamp', 92.7, 112.1, 1, 1);
+				var lamp:FlxSprite = new FlxSprite(92.7, 112.1).loadGraphic(Paths.image('stagePhil/worker/workerLamp', 'phil'));
 				lamp.antialiasing = true;
 				add(lamp);
 
-				philScared = new BGSprite('stagePhil/worker/phil-scared', 149.75, 317, 1, 1, ['phil idle in fear']);
+				philScared = new BGSprite('phil-scared', 149.75, 317, 1, 1, ['phil idle in fear']);
 				add(philScared);
 
-				philScared.animation.play('phil idle in fear', true);
+				philScared.dance(true);
 
 			case 'lilmanBg':
 
-				var bg:BGSprite = new BGSprite('stagePhil/lilman/lilmanBg', 0, 0, 1, 1);
+				var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('stagePhil/lilman/lilmanBg', 'phil'));
 				bg.antialiasing = true;
 				add(bg);
 
-				var road:BGSprite = new BGSprite('stagePhil/lilman/lilmanRoad', -0.5, 587.7, 1, 1);
+				var road:FlxSprite = new FlxSprite(-0.5, 587.7).loadGraphic(Paths.image('stagePhil/lilman/lilmanRoad', 'phil'));
 				road.antialiasing = true;
 				add(road);
 
 
 				lilmanSpike.antialiasing = true;
 				lilmanSpike.cameras = [camGame];
-				lilmanSpike.frames = Paths.getSparrowAtlas('stagePhil/lilman/lilmanSpike', 'shared');
+				lilmanSpike.frames = Paths.getSparrowAtlas('stagePhil/lilman/lilmanSpike', 'phil');
 				lilmanSpike.animation.addByPrefix('attack', 'spike rise', 24, false);
 
 				lilmanSpike.x += 612.4;
 				lilmanSpike.y += 405.4;
 
 				add(lilmanSpike);
-				
-				var grass:BGSprite = new BGSprite('stagePhil/lilman/lilmanGrass', 5.4, 829.75, 1, 1);
+
+				var grass:FlxSprite = new FlxSprite(5.4, 829.75).loadGraphic(Paths.image('stagePhil/lilman/lilmanGrass', 'phil'));
 				grass.antialiasing = true;
 				add(grass);
 
-				var lamp:BGSprite = new BGSprite('stagePhil/lilman/lilmanLamp', 92.7, 112.1, 1, 1);
+				var lamp:FlxSprite = new FlxSprite(92.7, 112.1).loadGraphic(Paths.image('stagePhil/lilman/lilmanLamp', 'phil'));
 				lamp.antialiasing = true;
 				add(lamp);
 
-				var ripbozo:BGSprite = new BGSprite('stagePhil/lilman/lilmanRipbozo', 271.5, 500.2, 1, 1);
+				var ripbozo:FlxSprite = new FlxSprite(271.5, 500.2).loadGraphic(Paths.image('stagePhil/lilman/lilmanRipbozo', 'phil'));
 				ripbozo.antialiasing = true;
 				add(ripbozo);
 
@@ -462,13 +462,14 @@ class PlayState extends MusicBeatState
 				//why you built like that
 				bossKnife.alpha = 0;
 
-				bossKnife.frames = Paths.getSparrowAtlas('stagePhil/slack/bossKnife', 'shared');
+				bossKnife.frames = Paths.getSparrowAtlas('stagePhil/slack/bossKnife', 'phil');
 				bossKnife.animation.addByPrefix('attack', 'boss knife', 24, false);
 				
-				var hell:BGSprite = new BGSprite('stagePhil/slack/slackBg', 0, 0, 1.2, 1.2);
+				var hell:FlxSprite = new FlxSprite().loadGraphic(Paths.image('stagePhil/slack/slackBg', 'phil'));
 				hell.antialiasing = true;
 				hell.screenCenter();
 				hell.scale.set(1.5,1.5);
+				hell.scrollFactor.set(1.35, 1.35);
 
 				add(hell);
 
@@ -477,7 +478,7 @@ class PlayState extends MusicBeatState
 				boss.screenCenter();
 				boss.scale.set(2,2);
 
-				boss.frames = Paths.getSparrowAtlas('stagePhil/slack/Boss', 'shared');
+				boss.frames = Paths.getSparrowAtlas('stagePhil/slack/Boss', 'phil');
 				boss.animation.addByPrefix('idle', 'Idle', 24, true);
 				boss.animation.addByPrefix('attack', 'attack', 24, false);
 
@@ -486,7 +487,7 @@ class PlayState extends MusicBeatState
 
 				boss.animation.play('idle');
 
-				var hellplatforms = new BGSprite('stagePhil/slack/hellPlatforms', 400, 1090, 1, 1);
+				var hellplatforms:FlxSprite = new FlxSprite(400, 1090).loadGraphic(Paths.image('stagePhil/slack/hellPlatforms', 'phil'));
 				hellplatforms.antialiasing = true;
 				hellplatforms.scale.set(1.95,1.95);
 
@@ -1150,34 +1151,42 @@ class PlayState extends MusicBeatState
 						iconP2.alpha = 0;
 						scoreTxt.alpha = 0;
 						var city:FlxSound;
-						city = new FlxSound().loadEmbedded(Paths.sound('city'));
+						city = new FlxSound().loadEmbedded(Paths.sound('city', 'phil'));
 						city.play();
+						city.volume = 2;
 						FlxG.sound.list.add(city);
 						
 						var philUhh:FlxSprite;
 						philUhh = new FlxSprite(149.75, 317);
-						philUhh.frames = Paths.getSparrowAtlas('phil_cutscene/phil-uhh', 'shared');
+						philUhh.frames = Paths.getSparrowAtlas('CUTSCENE SHIT/phil-uhh', 'phil');
 						philUhh.animation.addByPrefix('idle',"phil wtf is going on", 24, true);
 						philUhh.animation.addByPrefix('shit',"phil-ohshit", 24, false);
 						philUhh.animation.play('idle');
 						philUhh.antialiasing = true;
 						add(philUhh);
+
+						var philOhshit:FlxSprite;
+						philOhshit = new FlxSprite(149.75, 317);
+						philOhshit.frames = Paths.getSparrowAtlas('CUTSCENE SHIT/phil-ohshit', 'phil');
+						philOhshit.animation.addByPrefix('shit',"phil-ohshit", 24, false);
+						philOhshit.animation.play('idle');
+						philOhshit.antialiasing = true;
 							
 						var engaged:FlxSprite;
 						engaged = new FlxSprite(454.8, 308);
-						engaged.frames = Paths.getSparrowAtlas('phil_cutscene/philmer-ready', 'shared');
+						engaged.frames = Paths.getSparrowAtlas('CUTSCENE SHIT/philmer-ready', 'phil');
 						engaged.animation.addByPrefix('idle',"philmer-ready", 24, false);
 						engaged.animation.play('idle');
 						engaged.antialiasing = true;
 	
 						var hmm:FlxSprite;
 						hmm = new FlxSprite(502.95, 312.3);
-						hmm.frames = Paths.getSparrowAtlas('phil_cutscene/philmer-hmm', 'shared');
+						hmm.frames = Paths.getSparrowAtlas('CUTSCENE SHIT/philmer-hmm', 'phil');
 						hmm.animation.addByPrefix('idle',"philmer-hmm", 24, false);
 						hmm.animation.play('idle');
 						hmm.antialiasing = true;
 						add(hmm);
-	
+
 						hmm.animation.callback = function(idle, frameNumber:Int, frameIndex:Int)
 							{
 								if (frameNumber == 35)
@@ -1185,14 +1194,15 @@ class PlayState extends MusicBeatState
 										FlxG.sound.play(Paths.sound('bfBeep'));
 										boyfriend.playAnim('singLEFT');
 										camFollow.x += 150;
-										city.fadeOut(4,0);
 									}
 								if (frameNumber == 55)
 									{
 										remove(hmm);
 										camFollow.x -= 150;
 										add(engaged);
-										philUhh.animation.play('shit');
+										remove(philUhh);
+										add(philOhshit);
+										philOhshit.animation.play('shit');
 									}
 									
 							}
@@ -1200,11 +1210,12 @@ class PlayState extends MusicBeatState
 						engaged.animation.finishCallback = function(idle)
 							{
 								remove(engaged);
-								remove(philUhh);
+								remove(philOhshit);
 								philScared.alpha = 1;
 								philScared.dance(true);
 								dad.alpha = 1;
 								startCountdown();
+								city.fadeOut(4,0);
 								if (!ClientPrefs.hideHud)
 									{
 										FlxTween.tween(scoreTxt, {alpha: 1}, (Conductor.stepCrochet * 16 / 1000), {ease: FlxEase.quadInOut});
@@ -1281,7 +1292,7 @@ class PlayState extends MusicBeatState
 
 	function AttackWarning():Void {
 
-		var warningSound:FlxSound = new FlxSound().loadEmbedded(Paths.sound('bossAttackAlert'));
+		var warningSound:FlxSound = new FlxSound().loadEmbedded(Paths.sound('bossAttackAlert', 'phil'));
 		
 		warningSound.volume = 20;
 
@@ -4030,13 +4041,13 @@ class PlayState extends MusicBeatState
 
 		spacebarWarning();
 
-		var ded:FlxSound = new FlxSound().loadEmbedded(Paths.sound('BF_KnifeDeath'));
+		var ded:FlxSound = new FlxSound().loadEmbedded(Paths.sound('BF_KnifeDeath', 'phil'));
 		ded.volume = 1;
 
-		var bossfire:FlxSound = new FlxSound().loadEmbedded(Paths.sound('bossFire'));
+		var bossfire:FlxSound = new FlxSound().loadEmbedded(Paths.sound('bossFire', 'phil'));
 		bossfire.volume = 0.5;
 
-		var lilmanAttack:FlxSound = new FlxSound().loadEmbedded(Paths.sound('littlemanAttack'));
+		var lilmanAttack:FlxSound = new FlxSound().loadEmbedded(Paths.sound('littlemanAttack', 'phil'));
 		lilmanAttack.volume = 0.5;
 
 		if (curStage == 'slackBg' || curStage == 'workerBg' || curStage == 'lilmanBg'){
@@ -4083,6 +4094,7 @@ class PlayState extends MusicBeatState
 						trace('ouch');
 					}
 					else if(bfDodging = true){
+						trace('awesome');
 						health += 0.05;
 					}
 				}
@@ -4255,8 +4267,10 @@ class PlayState extends MusicBeatState
 				if(heyTimer <= 0) bottomBoppers.dance(true);
 				santa.dance(true);
 
-			/*case 'workerBg':
-				philScared.dance(true);*/
+			case 'workerBg':
+				if(curBeat % 2 == 0) {
+				philScared.dance(true);
+				}
 
 			case 'limo':
 				if(!ClientPrefs.lowQuality) {

@@ -75,6 +75,11 @@ class LoadingState extends MusicBeatState
 					checkLibrary(directory);
 				}
 
+				checkLibrary("phil");
+				if(directory != null && directory.length > 0 && directory != 'phil') {
+					checkLibrary(directory);
+				}
+
 				var fadeTime = 0.5;
 				FlxG.camera.fade(FlxG.camera.bgColor, fadeTime, true);
 				new FlxTimer().start(fadeTime + MIN_TIME, function(_) introComplete());
