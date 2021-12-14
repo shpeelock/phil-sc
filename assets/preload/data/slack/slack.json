@@ -1,6 +1,6 @@
 {
 	"song": {
-		"player1": "bf",
+		"player1": "bf-phil",
 		"notes": [
 			{
 				"sectionNotes": [
@@ -7665,6 +7665,36 @@
 				"bpm": 170
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 170,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 170
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 170,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
 				"gfSection": false,
 				"lengthInSteps": 16,
 				"altAnim": false,
@@ -7678,6 +7708,7 @@
 		"player2": "phil",
 		"player3": "gf",
 		"song": "slack",
+		"arrowSkin": "NOTE_assets-phil",
 		"stage": "slackBg",
 		"needsVoices": true,
 		"validScore": true,

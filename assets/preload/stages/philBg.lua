@@ -1,7 +1,7 @@
-local xx = 530;
-local yy = 330;
-local xx2 = 560;
-local yy2 = 330;
+local xx = 930;
+local yy = 590;
+local xx2 = 960;
+local yy2 = 590;
 local ofs = 15;
 local followchars = true;
 

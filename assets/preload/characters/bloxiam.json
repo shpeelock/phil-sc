@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				323,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				75,
+				-406
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				-90,
+				-27
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				-20,
+				141
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bloxiam-updated",
+	"position": [
+		50,
+		110
+	],
+	"healthicon": "bloxiam",
+	"flip_x": false,
+	"healthbar_colors": [
+		209,
+		45,
+		45
+	],
+	"camera_position": [
+		-120,
+		300
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

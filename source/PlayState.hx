@@ -398,6 +398,11 @@ class PlayState extends MusicBeatState
 				add(bg);
 				bg.scale.set(0.7, 0.7);
 
+			case 'blosimsBg':
+				var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('stagePhil/blosimsBg', 'phil'));
+				bg.antialiasing = true;
+				add(bg);
+				
 			case 'workerBg':
 
 				var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('stagePhil/worker/workerBg', 'phil'));
@@ -458,7 +463,7 @@ class PlayState extends MusicBeatState
 				bossKnife.cameras = [camGame];
 				bossKnife.screenCenter();
 				bossKnife.scale.set(1,1);
-				bossKnife.y += 300;
+				bossKnife.y += 40;
 				//why you built like that
 				bossKnife.alpha = 0;
 
@@ -492,8 +497,6 @@ class PlayState extends MusicBeatState
 				hellplatforms.scale.set(1.95,1.95);
 
 				add(hellplatforms);
-
-				add(bossKnife);
 
 				add(boss);
 
@@ -876,6 +879,8 @@ class PlayState extends MusicBeatState
 				gf.visible = false;
 			case 'lilmanBg':
 				gf.visible = false;
+			case 'blosimsBg':
+				gf.visible = false;
 		}
 
 		var file:String = Paths.json(songName + '/dialogue'); //Checks for json/Psych Engine dialogue
@@ -1144,6 +1149,7 @@ class PlayState extends MusicBeatState
 						});
 					});
 
+					//worker cutscene
 					case "worker":
 						healthBarBG.alpha = 0;
 						healthBar.alpha = 0;
@@ -1260,6 +1266,12 @@ class PlayState extends MusicBeatState
 	}
 
 	function spacebarInstructions():Void {
+
+		if(curStage == 'slackBg'){
+			add(bossKnife);
+		}
+
+
 		var	spacebarInstructions = new FlxText(0, 0, 500); // x, y, width
 		spacebarInstructions.text = "SPACEBAR TO DODGE!!";
 		spacebarInstructions.setFormat(Paths.font("vcr.ttf"), 42, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -3555,7 +3567,13 @@ class PlayState extends MusicBeatState
 				bfDodging = true;
 				bfCanDodge = false;
 
-				boyfriend.playAnim('dodge', true);
+				if(curStage == 'slackBg' || curStage == 'workerBg'){
+					boyfriend.playAnim('alt-dodge', true);
+				}
+				else
+				{
+					boyfriend.playAnim('dodge', true);
+				}
 
 				new FlxTimer().start(0.330, function(tmr:FlxTimer)
 				{
@@ -4025,6 +4043,27 @@ class PlayState extends MusicBeatState
 		}
 	}
 
+	var drainTime:FlxTimer;
+
+	function healthdrain():Void
+		{
+
+			var bleedShit:FlxSprite = new FlxSprite().loadGraphic(Paths.image('bleed', 'phil'));
+			bleedShit.alpha = 1;
+			bleedShit.cameras = [camHUD];
+			bleedShit.screenCenter();
+			add(bleedShit);
+
+			drainTime = new FlxTimer().start(0.1, function(tmr:FlxTimer)
+			{
+				health -= 0.005;
+			}, 100);
+			
+			if (drainTime.finished){
+				bleedShit.alpha = 0;
+			}
+		}
+
 	function bossAttackAnimation(){
 		if (curStage == 'slackBg'){
 			boss.animation.play('attack', true);
@@ -4050,28 +4089,30 @@ class PlayState extends MusicBeatState
 		var lilmanAttack:FlxSound = new FlxSound().loadEmbedded(Paths.sound('littlemanAttack', 'phil'));
 		lilmanAttack.volume = 0.5;
 
-		if (curStage == 'slackBg' || curStage == 'workerBg' || curStage == 'lilmanBg'){
+		if (curStage == 'slackBg'){
 
 			bossKnife.animation.play('attack', true);
-
+			bossAttackAnimation();
+			bossfire.play();
 			bossKnife.alpha = 1;
+			if(cpuControlled){
+				boyfriend.playAnim('alt-dodge', true);
+			}
+		}
 
-			if(curStage == 'lilmanBg'){
+			else if(curStage == 'lilmanBg'){
 				lilmanAttack.play();
 				lilmanSpike.animation.play('attack', true);
+				if(cpuControlled){
+					boyfriend.playAnim('dodge', true);
+				}
 			}
-			else if(curStage == 'workerbg'){
+			else if(curStage == 'workerBg'){
 				bossfire.play();
 				dad.playAnim('attack', true);
-			}
-			else
-			{
-				bossAttackAnimation();
-				bossfire.play();
-			}
-
-			if(cpuControlled){
-				boyfriend.playAnim('dodge');
+				if(cpuControlled){
+					boyfriend.playAnim('alt-dodge', true);
+				}
 			}
 
 			new FlxTimer().start(0.1, function(tmr:FlxTimer)
@@ -4079,7 +4120,6 @@ class PlayState extends MusicBeatState
 				//botplay check
 				if(cpuControlled){
 					deathByKnife = false;
-					boss.animation.play('idle', true);
 					trace('using botplay');
 				}
 				else
@@ -4087,20 +4127,19 @@ class PlayState extends MusicBeatState
 					if(!bfDodging)
 					{
 						deathByKnife = true;
+						healthdrain();
 						ded.play();
-						health -= 0.8; //no insta kill everyone's sanity
-						boyfriend.playAnim('hit', true);
-						boss.animation.play('idle', true);
+						health -= 0.2; //no insta kill everyone's sanity
+						boyfriend.playAnim('hurt', true);
 						trace('ouch');
 					}
 					else if(bfDodging = true){
 						trace('awesome');
-						health += 0.05;
+						health += 0.2;
 					}
 				}
 			});
 		}	
-	}
 
 	function killHenchmen():Void
 	{
