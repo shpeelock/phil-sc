@@ -4048,21 +4048,24 @@ class PlayState extends MusicBeatState
 	function healthdrain():Void
 		{
 
-			var bleedShit:FlxSprite = new FlxSprite().loadGraphic(Paths.image('bleed', 'phil'));
-			bleedShit.alpha = 1;
-			bleedShit.cameras = [camHUD];
-			bleedShit.screenCenter();
-			add(bleedShit);
-
 			drainTime = new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
 				health -= 0.005;
 			}, 100);
 			
-			if (drainTime.finished){
-				bleedShit.alpha = 0;
-			}
 		}
+
+	function bleedingGraphic(){
+		var bleedShit:FlxSprite = new FlxSprite().loadGraphic(Paths.image('bleed', 'phil'));
+		bleedShit.alpha = 1;
+		bleedShit.cameras = [camHUD];
+		bleedShit.screenCenter();
+		add(bleedShit);
+
+		new FlxTimer().start(0.1, function(tmr:FlxTimer){
+			FlxTween.tween(bleedShit, {alpha: 0, }, 10, {ease: FlxEase.quadOut});
+		});
+	}
 
 	function bossAttackAnimation(){
 		if (curStage == 'slackBg'){
