@@ -1,0 +1,39 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "demon",
+			"text": "PHIL!!! WHY AREN'T YOU WORKING!!! YOU HAVE TO FINISH A REPORT IN 3 HOURS!!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "demon",
+			"text": "YOU'RE FIRED!!! YOU'VE PISSED ME OFF WITH YOUR SLACKING!!!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "demon",
+			"text": "AND THAT KID BESIDE YOU, HES ALSO GOING TO BE KILLED."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "bro smh this guy really underestimating the laws of Friday Night Funkin"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "what the fuck is wrong with you"
+		}
+	]
+}

@@ -40,18 +40,6 @@ class HealthIcon extends FlxSprite
 
 	public function changeIcon(char:String) {
 		if(this.char != char) {
-			offsetX = 0;
-			offsetY = 0;
-			switch (char) 
-			{
-				case 'little-man':
-					var file:FlxAtlasFrames = Paths.getSparrowAtlas('icons/littlemnan icon');
-					frames = file;
-					
-					animation.addByPrefix(char, 'little man icon', 24, true);
-					animation.play(char, true);
-
-			default:
 			var name:String = 'icons/' + char;
 			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-' + char; //Older versions of psych engine's support
 			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
@@ -68,7 +56,6 @@ class HealthIcon extends FlxSprite
 			}
 		}
 	}
-}
 
 	public function getCharacter():String {
 		return char;

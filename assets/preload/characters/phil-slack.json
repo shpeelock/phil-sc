@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-200
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "phil idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				13,
+				-201
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "phil Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-80,
+				-207
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "phil Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-324
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "phil Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-17,
+				-135
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "phil Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				40,
+				-410
+			],
+			"anim": "dead",
+			"fps": 24,
+			"name": "rip bozo",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/phil-slack",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "boss",
+	"flip_x": false,
+	"healthbar_colors": [
+		120,
+		37,
+		25
+	],
+	"camera_position": [
+		-20,
+		380
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
