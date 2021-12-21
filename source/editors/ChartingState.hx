@@ -57,6 +57,7 @@ class ChartingState extends MusicBeatState
 		'Alt Animation',
 		'Hey!',
 		'Hurt Note',
+		'little note',
 		'GF Sing',
 		'No Animation'
 	];
@@ -66,6 +67,8 @@ class ChartingState extends MusicBeatState
 	var eventStuff:Array<Dynamic> =
 	[
 		['', "Nothing. Yep, that's right."],
+		['Uhhh', "ZAMN"],
+		['flash thing', "oh hell nah"],
 		['Boss Attack', "WHAT THE FUCK"],
 		['Boss Attack Alert', "OOOH SHIIT!!!!!! thjey took my pretzels..."],
 		['Hey!', "Plays the \"Hey!\" animation from Bopeebo,\nValue 1: BF = Only Boyfriend, GF = Only Girlfriend,\nSomething else = Both.\nValue 2: Custom animation duration,\nleave it blank for 0.6s"],
@@ -178,10 +181,19 @@ class ChartingState extends MusicBeatState
 		DiscordClient.changePresence("Chart Editor", StringTools.replace(PlayState.SONG.song, '-', ' '));
 		#end
 
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		bg.scrollFactor.set();
-		bg.color = 0xFF222222;
-		add(bg);
+		if(PlayState.SONG.song.toLowerCase() == 'blosims'){
+			var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('blosim', 'phil'));
+			bg.scrollFactor.set();
+			bg.color = 0xFF222222;
+			add(bg);
+		}
+		else 
+		{
+			var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+			bg.scrollFactor.set();
+			bg.color = 0xFF222222;
+			add(bg);
+		}
 
 		gridLayer = new FlxTypedGroup<FlxSprite>();
 		add(gridLayer);
@@ -1415,6 +1427,8 @@ class ChartingState extends MusicBeatState
 						var soundToPlay = 'ChartingTick';
 						if(_song.player1 == 'gf') { //Easter egg
 							soundToPlay = 'GF_' + Std.string(data + 1);
+						} else if(_song.player2 == 'bloxiam') { //bloxiam
+							soundToPlay = 'bloxiam';
 						}
 						FlxG.sound.play(Paths.sound(soundToPlay));
 						playedSound[data] = true;

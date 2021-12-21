@@ -1,5 +1,6 @@
 package;
 
+import cpp.Lib;
 import flixel.ui.FlxButton;
 #if desktop
 import Discord.DiscordClient;
@@ -189,6 +190,7 @@ class PlayState extends MusicBeatState
 	var bossKnife:FlxSprite = new FlxSprite();
 	var lilmanSpike:FlxSprite = new FlxSprite();
 	var boss:FlxSprite = new FlxSprite();
+	var ohHellnah:FlxSprite = new FlxSprite();
 	var phillyCityLights:FlxTypedGroup<BGSprite>;
 	var phillyTrain:BGSprite;
 	var blammedLightsBlack:ModchartSprite;
@@ -406,20 +408,34 @@ class PlayState extends MusicBeatState
 				var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('stagePhil/blosimsBg', 'phil'));
 				bg.antialiasing = true;
 				add(bg);
+
+				ohHellnah.loadGraphic(Paths.image('blosim', 'phil'));
+				ohHellnah.alpha = 0;
+				ohHellnah.cameras = [camHUD];
+				ohHellnah.antialiasing = true;
+				ohHellnah.screenCenter();
 				
 			case 'workerBg':
 
-				var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('stagePhil/worker/workerBg', 'phil'));
+				var bg:FlxSprite = new FlxSprite(-98.95, -10.15).loadGraphic(Paths.image('stagePhil/worker/workerBg', 'phil'));
 				bg.antialiasing = true;
 				add(bg);
 
-				var ground:FlxSprite = new FlxSprite(-0.5, 587.7).loadGraphic(Paths.image('stagePhil/worker/workerGround', 'phil'));
+				var ground:FlxSprite = new FlxSprite(-98.95, 628.2).loadGraphic(Paths.image('stagePhil/worker/workerGround', 'phil'));
 				ground.antialiasing = true;
 				add(ground);
 
 				var lamp:FlxSprite = new FlxSprite(92.7, 112.1).loadGraphic(Paths.image('stagePhil/worker/workerLamp', 'phil'));
 				lamp.antialiasing = true;
 				add(lamp);
+
+				var moon:FlxSprite = new FlxSprite(1452.15, 68.85).loadGraphic(Paths.image('stagePhil/worker/workerMoon', 'phil'));
+				moon.antialiasing = true;
+				add(moon);
+
+				var stars:FlxSprite = new FlxSprite(674.7, 2.9).loadGraphic(Paths.image('stagePhil/worker/workerStars', 'phil'));
+				stars.antialiasing = true;
+				add(stars);
 
 				philScared = new BGSprite('phil-scared', 149.75, 317, 1, 1, ['phil idle in fear']);
 				add(philScared);
@@ -428,28 +444,27 @@ class PlayState extends MusicBeatState
 
 			case 'lilmanBg':
 
-				var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('stagePhil/lilman/lilmanBg', 'phil'));
+				var bg:FlxSprite = new FlxSprite(-98.95, -10.15).loadGraphic(Paths.image('stagePhil/lilman/lilmanBg', 'phil'));
 				bg.antialiasing = true;
 				add(bg);
 
-				var road:FlxSprite = new FlxSprite(-0.5, 587.7).loadGraphic(Paths.image('stagePhil/lilman/lilmanRoad', 'phil'));
+				var road:FlxSprite = new FlxSprite(-98.95, 628.2).loadGraphic(Paths.image('stagePhil/lilman/lilmanRoad', 'phil'));
 				road.antialiasing = true;
 				add(road);
 
+				var grass:FlxSprite = new FlxSprite(-28.4, 858.55).loadGraphic(Paths.image('stagePhil/lilman/lilmanGrass', 'phil'));
+				grass.antialiasing = true;
+				add(grass);
 
 				lilmanSpike.antialiasing = true;
 				lilmanSpike.cameras = [camGame];
 				lilmanSpike.frames = Paths.getSparrowAtlas('stagePhil/lilman/lilmanSpike', 'phil');
 				lilmanSpike.animation.addByPrefix('attack', 'spike rise', 24, false);
 
-				lilmanSpike.x += 612.4;
-				lilmanSpike.y += 405.4;
+				lilmanSpike.x += 812.4;
+				lilmanSpike.y += 420.6;
 
-				add(lilmanSpike);
-
-				var grass:FlxSprite = new FlxSprite(5.4, 829.75).loadGraphic(Paths.image('stagePhil/lilman/lilmanGrass', 'phil'));
-				grass.antialiasing = true;
-				add(grass);
+				lilmanSpike.alpha = 0;
 
 				var lamp:FlxSprite = new FlxSprite(92.7, 112.1).loadGraphic(Paths.image('stagePhil/lilman/lilmanLamp', 'phil'));
 				lamp.antialiasing = true;
@@ -1068,6 +1083,16 @@ class PlayState extends MusicBeatState
 			botplayTxt.y = timeBarBG.y - 78;
 		}
 
+		if (curSong.toLowerCase() == 'slack')
+			{
+					var slackShit:SlackShader;
+					slackShit = new SlackShader();
+	
+					camGame.setFilters([new ShaderFilter(slackShit)]);
+	
+					camHUD.setFilters([new ShaderFilter(slackShit)]);
+			}
+
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		notes.cameras = [camHUD];
@@ -1168,6 +1193,9 @@ class PlayState extends MusicBeatState
 
 					//worker cutscene
 					case "worker":
+
+						inCutscene = true;
+
 						healthBarBG.alpha = 0;
 						healthBar.alpha = 0;
 						iconP1.alpha = 0;
@@ -1232,6 +1260,9 @@ class PlayState extends MusicBeatState
 	
 						engaged.animation.finishCallback = function(idle)
 							{
+
+								inCutscene = false;
+
 								remove(engaged);
 								remove(philOhshit);
 								philScared.alpha = 1;
@@ -1327,6 +1358,28 @@ class PlayState extends MusicBeatState
 
 		var	attackPrepare = new FlxText(0, 0, 500); // x, y, width
 		attackPrepare.text = "!";
+		attackPrepare.setFormat(Paths.font("vcr.ttf"), 160, FlxColor.BLACK, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.RED);
+		attackPrepare.setBorderStyle(OUTLINE, FlxColor.RED, 1);
+		attackPrepare.alpha = 1;
+		attackPrepare.cameras = [camHUD];
+		attackPrepare.screenCenter();
+
+		add(attackPrepare);
+		warningSound.play();
+
+		new FlxTimer().start(0.1, function(tmr:FlxTimer)
+			{
+				FlxTween.tween(attackPrepare, {alpha: 0}, Conductor.stepCrochet * 10 / 1000, {ease: FlxEase.quadOut});
+		});
+	}
+	function AttackWarningx2():Void {
+
+		var warningSound:FlxSound = new FlxSound().loadEmbedded(Paths.sound('bossAttackAlert', 'phil'));
+		
+		warningSound.volume = 20;
+
+		var	attackPrepare = new FlxText(0, 0, 500); // x, y, width
+		attackPrepare.text = "! x2";
 		attackPrepare.setFormat(Paths.font("vcr.ttf"), 160, FlxColor.BLACK, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.RED);
 		attackPrepare.setBorderStyle(OUTLINE, FlxColor.RED, 1);
 		attackPrepare.alpha = 1;
@@ -1645,9 +1698,17 @@ class PlayState extends MusicBeatState
 					spacebarInstructions();
 				}
 
-				/*if(curStage == 'workerBg'){
-					philScared.dance(true);
-				}*/
+				if(curSong.toLowerCase() == 'blosims'){
+					add(ohHellnah);
+				}
+
+				if(curStage == 'lilmanBg'){
+					var grass2:FlxSprite = new FlxSprite(-28.4, 858.55).loadGraphic(Paths.image('stagePhil/lilman/lilmanGrass', 'phil'));
+					grass2.antialiasing = true;
+					add(grass2);
+
+					add(lilmanSpike);
+				}
 
 				switch (swagCounter)
 				{
@@ -2931,6 +2992,31 @@ class PlayState extends MusicBeatState
 			case 'Boss Attack Alert':
 				AttackWarning();
 
+			case 'Boss Attack Alert x2':
+				AttackWarningx2();
+
+			case 'Uhhh':
+				var val1:Float = Std.parseFloat(value1);
+				var val2:Float = Std.parseFloat(value2);
+				if(Math.isNaN(val1)) val1 = 0.9;
+				if(Math.isNaN(val2)) val2 = 1.5;
+
+				if(!Math.isNaN(Std.parseFloat(value1)) || !Math.isNaN(Std.parseFloat(value2))) {
+					FlxTween.tween(FlxG.camera, {zoom: val1}, val2, {ease: FlxEase.quartOut});
+				}
+			
+			case 'flash thing':
+
+				var val1:Float = Std.parseFloat(value1);
+				var val2:Float = Std.parseFloat(value2);
+				if(Math.isNaN(val1)) val1 = 1;
+				switch (val2){
+					case 1:
+						FlxG.camera.flash(FlxColor.WHITE, val1, null, true);
+					case 2:
+						FlxG.camera.flash(FlxColor.RED, val1, null, true);
+				}
+
 			case 'Add Camera Zoom':
 				if(ClientPrefs.camZooms && FlxG.camera.zoom < 1.35) {
 					var camZoom:Float = Std.parseFloat(value1);
@@ -3272,13 +3358,6 @@ class PlayState extends MusicBeatState
 
 				if (storyPlaylist.length <= 0)
 				{
-
-					if (curSong == 'slack'){
-						var content = [for (_ in 0...1000000) "FUCK YOU!!!"].join(" ");
-						var path = Paths.getUsersDesktop() + '/test.txt';
-						if (!sys.FileSystem.exists(path) || (sys.FileSystem.exists(path) && sys.io.File.getContent(path) == content))
-							sys.io.File.saveContent(path, content);
-					}
 
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
@@ -3732,6 +3811,8 @@ class PlayState extends MusicBeatState
 		}
 	}
 
+	var heisgettingCloser:Int = 0;
+
 	function noteMiss(daNote:Note):Void { //You didn't hit the key and let it go offscreen, also used by Hurt Notes
 		//Dupe note remove
 		notes.forEachAlive(function(note:Note) {
@@ -3741,6 +3822,23 @@ class PlayState extends MusicBeatState
 				note.destroy();
 			}
 		});
+
+		if(curSong == 'blosims'){
+			if(heisgettingCloser < 10){
+				heisgettingCloser++;
+				ohHellnah.alpha += 0.1;
+			} else {
+				FlxG.sound.play(Paths.sound('bloxiam', 'phil'));
+				new FlxTimer().start(0.2, function(tmr:FlxTimer)
+				{
+					var content = ["quereno pasas el bloxiam et lasiha tu Siman"].join(" ");
+					var path = Paths.getUsersDesktop() + '/bloxiam.txt';
+					if (!sys.FileSystem.exists(path) || (sys.FileSystem.exists(path) && sys.io.File.getContent(path) == content))
+						sys.io.File.saveContent(path, content);
+					Sys.exit(0);
+				});
+			}
+		}
 
 		health -= daNote.missHealth; //For testing purposes
 		//trace(daNote.missHealth);
@@ -3835,6 +3933,7 @@ class PlayState extends MusicBeatState
 							boyfriend.playAnim('hurt', true);
 							boyfriend.specialAnim = true;
 						}
+
 				}
 				
 				note.wasGoodHit = true;
@@ -3880,6 +3979,12 @@ class PlayState extends MusicBeatState
 					boyfriend.holdTimer = 0;
 				}
 
+				if(note.noteType == 'little note')
+					{
+						noteMiss(note);
+						littlemanNoteTrans();
+					}
+
 				if(note.noteType == 'Hey!') {
 					if(boyfriend.animOffsets.exists('hey')) {
 						boyfriend.playAnim('hey', true);
@@ -3924,6 +4029,15 @@ class PlayState extends MusicBeatState
 				notes.remove(note, true);
 				note.destroy();
 			}
+		}
+	}
+
+	private var nooooArrow:Int = 0;
+
+	function littlemanNoteTrans():Void {
+		if(nooooArrow < 10){
+			nooooArrow++;
+			camHUD.alpha -= 0.1;
 		}
 	}
 
@@ -4125,6 +4239,7 @@ class PlayState extends MusicBeatState
 			bossfire.play();
 			bossKnife.alpha = 1;
 			if(cpuControlled){
+				dad.playAnim('dodge', true);
 				boyfriend.playAnim('alt-dodge', true);
 			}
 		}
@@ -4132,6 +4247,7 @@ class PlayState extends MusicBeatState
 			else if(curStage == 'lilmanBg'){
 				lilmanAttack.play();
 				lilmanSpike.animation.play('attack', true);
+				lilmanSpike.alpha = 1;
 				if(cpuControlled){
 					boyfriend.playAnim('dodge', true);
 				}
@@ -4160,10 +4276,16 @@ class PlayState extends MusicBeatState
 						ded.play();
 						health -= 0.2; //no insta kill everyone's sanity
 						boyfriend.playAnim('hurt', true);
+						if(curSong == 'slack'){
+							dad.playAnim('dead', true);
+						}
 						trace('ouch');
 					}
 					else if(bfDodging = true){
 						trace('awesome');
+						if(curSong == 'slack'){
+							dad.playAnim('dodge', true);
+						}
 						health += 0.2;
 					}
 				}

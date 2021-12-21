@@ -1,70 +1,81 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-28,
 				-217
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "evil philmer right"
+			"fps": 24,
+			"name": "evil philmer right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				21,
 				-221
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "evil philmer down"
+			"fps": 24,
+			"name": "evil philmer down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				-200
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "evil philmer idle"
+			"fps": 24,
+			"name": "evil philmer idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				25,
 				-151
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "evil philmer up"
+			"fps": 24,
+			"name": "evil philmer up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				19,
 				-191
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "evil philmer left"
+			"fps": 24,
+			"name": "evil philmer left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				21,
 				-202
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "attack",
+			"fps": 24,
+			"name": "evil philmer attack",
+			"indices": []
+		},
+		{
+			"offsets": [
+				68,
+				13
+			],
 			"indices": [],
-			"name": "evil philmer attack"
+			"fps": 24,
+			"anim": "dies",
+			"loop": false,
+			"name": "arse"
 		}
 	],
 	"no_antialiasing": false,

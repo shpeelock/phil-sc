@@ -2,89 +2,123 @@
 <TextureAtlas imagePath="phil-evil.png">
 	<!-- Created with Adobe Animate version 22.0.0.93 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="evil philmer attack0000" x="4374" y="1454" width="448" height="449"/>
-	<SubTexture name="evil philmer attack0001" x="4852" y="1454" width="448" height="449"/>
-	<SubTexture name="evil philmer attack0002" x="5330" y="1454" width="448" height="449"/>
-	<SubTexture name="evil philmer attack0003" x="5808" y="1454" width="448" height="449"/>
-	<SubTexture name="evil philmer attack0004" x="6286" y="1475" width="448" height="449"/>
-	<SubTexture name="evil philmer attack0005" x="6764" y="1865" width="448" height="449"/>
-	<SubTexture name="evil philmer attack0006" x="7242" y="1907" width="448" height="449"/>
-	<SubTexture name="evil philmer attack0007" x="4374" y="1933" width="448" height="449"/>
-	<SubTexture name="evil philmer attack0008" x="4852" y="1933" width="448" height="449"/>
-	<SubTexture name="evil philmer attack0009" x="5330" y="1933" width="448" height="449"/>
-	<SubTexture name="evil philmer attack0010" x="5808" y="1933" width="448" height="449"/>
-	<SubTexture name="evil philmer attack0011" x="0" y="1935" width="448" height="449"/>
-	<SubTexture name="evil philmer down0000" x="7170" y="464" width="484" height="430"/>
-	<SubTexture name="evil philmer down0001" x="7170" y="924" width="484" height="430"/>
-	<SubTexture name="evil philmer down0002" x="0" y="994" width="484" height="430"/>
-	<SubTexture name="evil philmer down0003" x="514" y="994" width="484" height="430"/>
-	<SubTexture name="evil philmer down0004" x="1028" y="994" width="484" height="430"/>
-	<SubTexture name="evil philmer down0005" x="1542" y="994" width="484" height="430"/>
-	<SubTexture name="evil philmer down0006" x="2056" y="994" width="484" height="430"/>
-	<SubTexture name="evil philmer down0007" x="2570" y="994" width="484" height="430"/>
-	<SubTexture name="evil philmer down0008" x="3084" y="994" width="484" height="430"/>
-	<SubTexture name="evil philmer down0009" x="3598" y="994" width="484" height="430"/>
-	<SubTexture name="evil philmer down0010" x="4112" y="994" width="484" height="430"/>
-	<SubTexture name="evil philmer down0011" x="4626" y="994" width="484" height="430"/>
-	<SubTexture name="evil philmer down0012" x="5140" y="994" width="484" height="430"/>
-	<SubTexture name="evil philmer down0013" x="5654" y="994" width="484" height="430"/>
-	<SubTexture name="evil philmer down0014" x="6168" y="994" width="484" height="430"/>
-	<SubTexture name="evil philmer idle0000" x="7684" y="464" width="456" height="451"/>
-	<SubTexture name="evil philmer idle0001" x="7684" y="945" width="456" height="451"/>
-	<SubTexture name="evil philmer idle0002" x="6682" y="994" width="456" height="451"/>
-	<SubTexture name="evil philmer idle0003" x="7168" y="1384" width="456" height="451"/>
-	<SubTexture name="evil philmer idle0004" x="7654" y="1426" width="456" height="451"/>
-	<SubTexture name="evil philmer idle0005" x="0" y="1454" width="456" height="451"/>
-	<SubTexture name="evil philmer idle0006" x="486" y="1454" width="456" height="451"/>
-	<SubTexture name="evil philmer idle0007" x="972" y="1454" width="456" height="451"/>
-	<SubTexture name="evil philmer idle0008" x="1458" y="1454" width="456" height="451"/>
-	<SubTexture name="evil philmer idle0009" x="1944" y="1454" width="456" height="451"/>
-	<SubTexture name="evil philmer idle0010" x="2430" y="1454" width="456" height="451"/>
-	<SubTexture name="evil philmer idle0011" x="2916" y="1454" width="456" height="451"/>
-	<SubTexture name="evil philmer idle0012" x="3402" y="1454" width="456" height="451"/>
-	<SubTexture name="evil philmer idle0013" x="3888" y="1454" width="456" height="451"/>
-	<SubTexture name="evil philmer left0000" x="7720" y="1907" width="429" height="460"/>
-	<SubTexture name="evil philmer left0001" x="478" y="1935" width="429" height="460"/>
-	<SubTexture name="evil philmer left0002" x="937" y="1935" width="429" height="460"/>
-	<SubTexture name="evil philmer left0003" x="1396" y="1935" width="429" height="460"/>
-	<SubTexture name="evil philmer left0004" x="1855" y="1935" width="429" height="460"/>
-	<SubTexture name="evil philmer left0005" x="2314" y="1935" width="429" height="460"/>
-	<SubTexture name="evil philmer left0006" x="2773" y="1935" width="429" height="460"/>
-	<SubTexture name="evil philmer left0007" x="3232" y="1935" width="429" height="460"/>
-	<SubTexture name="evil philmer left0008" x="3691" y="1935" width="429" height="460"/>
-	<SubTexture name="evil philmer left0009" x="6286" y="1954" width="429" height="460"/>
-	<SubTexture name="evil philmer left0010" x="6745" y="2344" width="429" height="460"/>
-	<SubTexture name="evil philmer left0011" x="7204" y="2386" width="429" height="460"/>
-	<SubTexture name="evil philmer left0012" x="7663" y="2397" width="429" height="460"/>
-	<SubTexture name="evil philmer left0013" x="4150" y="2412" width="429" height="460"/>
-	<SubTexture name="evil philmer left0014" x="4609" y="2412" width="429" height="460"/>
-	<SubTexture name="evil philmer right0000" x="0" y="0" width="553" height="434"/>
-	<SubTexture name="evil philmer right0001" x="583" y="0" width="553" height="434"/>
-	<SubTexture name="evil philmer right0002" x="1166" y="0" width="553" height="434"/>
-	<SubTexture name="evil philmer right0003" x="1749" y="0" width="553" height="434"/>
-	<SubTexture name="evil philmer right0004" x="2332" y="0" width="553" height="434"/>
-	<SubTexture name="evil philmer right0005" x="2915" y="0" width="553" height="434"/>
-	<SubTexture name="evil philmer right0006" x="3498" y="0" width="553" height="434"/>
-	<SubTexture name="evil philmer right0007" x="4081" y="0" width="553" height="434"/>
-	<SubTexture name="evil philmer right0008" x="4664" y="0" width="553" height="434"/>
-	<SubTexture name="evil philmer right0009" x="5247" y="0" width="553" height="434"/>
-	<SubTexture name="evil philmer right0010" x="5830" y="0" width="553" height="434"/>
-	<SubTexture name="evil philmer right0011" x="6413" y="0" width="553" height="434"/>
-	<SubTexture name="evil philmer right0012" x="6996" y="0" width="553" height="434"/>
-	<SubTexture name="evil philmer right0013" x="7579" y="0" width="553" height="434"/>
-	<SubTexture name="evil philmer up0000" x="0" y="464" width="448" height="500"/>
-	<SubTexture name="evil philmer up0001" x="478" y="464" width="448" height="500"/>
-	<SubTexture name="evil philmer up0002" x="956" y="464" width="448" height="500"/>
-	<SubTexture name="evil philmer up0003" x="1434" y="464" width="448" height="500"/>
-	<SubTexture name="evil philmer up0004" x="1912" y="464" width="448" height="500"/>
-	<SubTexture name="evil philmer up0005" x="2390" y="464" width="448" height="500"/>
-	<SubTexture name="evil philmer up0006" x="2868" y="464" width="448" height="500"/>
-	<SubTexture name="evil philmer up0007" x="3346" y="464" width="448" height="500"/>
-	<SubTexture name="evil philmer up0008" x="3824" y="464" width="448" height="500"/>
-	<SubTexture name="evil philmer up0009" x="4302" y="464" width="448" height="500"/>
-	<SubTexture name="evil philmer up0010" x="4780" y="464" width="448" height="500"/>
-	<SubTexture name="evil philmer up0011" x="5258" y="464" width="448" height="500"/>
-	<SubTexture name="evil philmer up0012" x="5736" y="464" width="448" height="500"/>
-	<SubTexture name="evil philmer up0013" x="6214" y="464" width="448" height="500"/>
-	<SubTexture name="evil philmer up0014" x="6692" y="464" width="448" height="500"/>
+	<SubTexture name="arse0000" x="0" y="0" width="1160" height="825"/>
+	<SubTexture name="arse0001" x="1174" y="0" width="1160" height="825"/>
+	<SubTexture name="arse0002" x="2348" y="0" width="1160" height="825"/>
+	<SubTexture name="arse0003" x="3522" y="0" width="1160" height="825"/>
+	<SubTexture name="arse0004" x="4696" y="0" width="1160" height="825"/>
+	<SubTexture name="arse0005" x="5870" y="0" width="1160" height="825"/>
+	<SubTexture name="arse0006" x="0" y="839" width="1160" height="825"/>
+	<SubTexture name="arse0007" x="1174" y="839" width="1160" height="825"/>
+	<SubTexture name="arse0008" x="2348" y="839" width="1160" height="825"/>
+	<SubTexture name="arse0009" x="3522" y="839" width="1160" height="825"/>
+	<SubTexture name="arse0010" x="4696" y="839" width="1160" height="825"/>
+	<SubTexture name="arse0011" x="5870" y="839" width="1160" height="825"/>
+	<SubTexture name="arse0012" x="0" y="1678" width="1160" height="825"/>
+	<SubTexture name="arse0013" x="1174" y="1678" width="1160" height="825"/>
+	<SubTexture name="arse0014" x="2348" y="1678" width="1160" height="825"/>
+	<SubTexture name="arse0015" x="3522" y="1678" width="1160" height="825"/>
+	<SubTexture name="arse0016" x="4696" y="1678" width="1160" height="825"/>
+	<SubTexture name="arse0017" x="5870" y="1678" width="1160" height="825"/>
+	<SubTexture name="arse0018" x="0" y="2517" width="1160" height="825"/>
+	<SubTexture name="arse0019" x="1174" y="2517" width="1160" height="825"/>
+	<SubTexture name="arse0020" x="2348" y="2517" width="1160" height="825"/>
+	<SubTexture name="arse0021" x="3522" y="2517" width="1160" height="825"/>
+	<SubTexture name="arse0022" x="4696" y="2517" width="1160" height="825"/>
+	<SubTexture name="arse0023" x="5870" y="2517" width="1160" height="825"/>
+	<SubTexture name="arse0024" x="0" y="3356" width="1160" height="825"/>
+	<SubTexture name="arse0025" x="1174" y="3356" width="1160" height="825"/>
+	<SubTexture name="arse0026" x="2348" y="3356" width="1160" height="825"/>
+	<SubTexture name="arse0027" x="3522" y="3356" width="1160" height="825"/>
+	<SubTexture name="arse0028" x="4696" y="3356" width="1160" height="825"/>
+	<SubTexture name="arse0029" x="5870" y="3356" width="1160" height="825"/>
+	<SubTexture name="arse0030" x="0" y="4195" width="1160" height="825"/>
+	<SubTexture name="arse0031" x="1174" y="4195" width="1160" height="825"/>
+	<SubTexture name="arse0032" x="2348" y="4195" width="1160" height="825"/>
+	<SubTexture name="arse0033" x="3522" y="4195" width="1160" height="825"/>
+	<SubTexture name="evil philmer attack0000" x="6362" y="5636" width="448" height="449"/>
+	<SubTexture name="evil philmer attack0001" x="6824" y="5636" width="448" height="449"/>
+	<SubTexture name="evil philmer attack0002" x="7286" y="5657" width="448" height="449"/>
+	<SubTexture name="evil philmer attack0003" x="4230" y="5688" width="448" height="449"/>
+	<SubTexture name="evil philmer attack0004" x="4692" y="5688" width="448" height="449"/>
+	<SubTexture name="evil philmer attack0005" x="0" y="5943" width="448" height="449"/>
+	<SubTexture name="evil philmer attack0006" x="462" y="5943" width="448" height="449"/>
+	<SubTexture name="evil philmer attack0007" x="924" y="5943" width="448" height="449"/>
+	<SubTexture name="evil philmer attack0008" x="1386" y="5943" width="448" height="449"/>
+	<SubTexture name="evil philmer attack0009" x="1848" y="5943" width="448" height="449"/>
+	<SubTexture name="evil philmer attack0010" x="2310" y="5943" width="448" height="449"/>
+	<SubTexture name="evil philmer attack0011" x="2772" y="5943" width="448" height="449"/>
+	<SubTexture name="evil philmer down0000" x="5620" y="4709" width="484" height="430"/>
+	<SubTexture name="evil philmer down0001" x="6118" y="4709" width="484" height="430"/>
+	<SubTexture name="evil philmer down0002" x="0" y="5034" width="484" height="430"/>
+	<SubTexture name="evil philmer down0003" x="498" y="5034" width="484" height="430"/>
+	<SubTexture name="evil philmer down0004" x="996" y="5034" width="484" height="430"/>
+	<SubTexture name="evil philmer down0005" x="1494" y="5034" width="484" height="430"/>
+	<SubTexture name="evil philmer down0006" x="1992" y="5034" width="484" height="430"/>
+	<SubTexture name="evil philmer down0007" x="2490" y="5034" width="484" height="430"/>
+	<SubTexture name="evil philmer down0008" x="2988" y="5034" width="484" height="430"/>
+	<SubTexture name="evil philmer down0009" x="3486" y="5034" width="484" height="430"/>
+	<SubTexture name="evil philmer down0010" x="3984" y="5034" width="484" height="430"/>
+	<SubTexture name="evil philmer down0011" x="5620" y="5153" width="484" height="430"/>
+	<SubTexture name="evil philmer down0012" x="6118" y="5153" width="484" height="430"/>
+	<SubTexture name="evil philmer down0013" x="6616" y="5192" width="484" height="430"/>
+	<SubTexture name="evil philmer down0014" x="7114" y="5192" width="484" height="430"/>
+	<SubTexture name="evil philmer idle0000" x="7612" y="5192" width="456" height="451"/>
+	<SubTexture name="evil philmer idle0001" x="4482" y="5223" width="456" height="451"/>
+	<SubTexture name="evil philmer idle0002" x="4952" y="5223" width="456" height="451"/>
+	<SubTexture name="evil philmer idle0003" x="0" y="5478" width="456" height="451"/>
+	<SubTexture name="evil philmer idle0004" x="470" y="5478" width="456" height="451"/>
+	<SubTexture name="evil philmer idle0005" x="940" y="5478" width="456" height="451"/>
+	<SubTexture name="evil philmer idle0006" x="1410" y="5478" width="456" height="451"/>
+	<SubTexture name="evil philmer idle0007" x="1880" y="5478" width="456" height="451"/>
+	<SubTexture name="evil philmer idle0008" x="2350" y="5478" width="456" height="451"/>
+	<SubTexture name="evil philmer idle0009" x="2820" y="5478" width="456" height="451"/>
+	<SubTexture name="evil philmer idle0010" x="3290" y="5478" width="456" height="451"/>
+	<SubTexture name="evil philmer idle0011" x="3760" y="5478" width="456" height="451"/>
+	<SubTexture name="evil philmer idle0012" x="5422" y="5597" width="456" height="451"/>
+	<SubTexture name="evil philmer idle0013" x="5892" y="5597" width="456" height="451"/>
+	<SubTexture name="evil philmer left0000" x="7748" y="5657" width="429" height="460"/>
+	<SubTexture name="evil philmer left0001" x="3234" y="5943" width="429" height="460"/>
+	<SubTexture name="evil philmer left0002" x="3677" y="5943" width="429" height="460"/>
+	<SubTexture name="evil philmer left0003" x="5154" y="6062" width="429" height="460"/>
+	<SubTexture name="evil philmer left0004" x="5597" y="6062" width="429" height="460"/>
+	<SubTexture name="evil philmer left0005" x="6040" y="6099" width="429" height="460"/>
+	<SubTexture name="evil philmer left0006" x="6483" y="6099" width="429" height="460"/>
+	<SubTexture name="evil philmer left0007" x="6926" y="6120" width="429" height="460"/>
+	<SubTexture name="evil philmer left0008" x="7369" y="6131" width="429" height="460"/>
+	<SubTexture name="evil philmer left0009" x="4120" y="6151" width="429" height="460"/>
+	<SubTexture name="evil philmer left0010" x="4563" y="6151" width="429" height="460"/>
+	<SubTexture name="evil philmer left0011" x="0" y="6406" width="429" height="460"/>
+	<SubTexture name="evil philmer left0012" x="443" y="6406" width="429" height="460"/>
+	<SubTexture name="evil philmer left0013" x="886" y="6406" width="429" height="460"/>
+	<SubTexture name="evil philmer left0014" x="1329" y="6406" width="429" height="460"/>
+	<SubTexture name="evil philmer right0000" x="7044" y="0" width="553" height="434"/>
+	<SubTexture name="evil philmer right0001" x="7611" y="0" width="553" height="434"/>
+	<SubTexture name="evil philmer right0002" x="7044" y="448" width="553" height="434"/>
+	<SubTexture name="evil philmer right0003" x="7611" y="448" width="553" height="434"/>
+	<SubTexture name="evil philmer right0004" x="7044" y="896" width="553" height="434"/>
+	<SubTexture name="evil philmer right0005" x="7611" y="896" width="553" height="434"/>
+	<SubTexture name="evil philmer right0006" x="7044" y="1344" width="553" height="434"/>
+	<SubTexture name="evil philmer right0007" x="7611" y="1344" width="553" height="434"/>
+	<SubTexture name="evil philmer right0008" x="7044" y="1792" width="553" height="434"/>
+	<SubTexture name="evil philmer right0009" x="7611" y="1792" width="553" height="434"/>
+	<SubTexture name="evil philmer right0010" x="7044" y="2240" width="553" height="434"/>
+	<SubTexture name="evil philmer right0011" x="7611" y="2240" width="553" height="434"/>
+	<SubTexture name="evil philmer right0012" x="7044" y="2688" width="553" height="434"/>
+	<SubTexture name="evil philmer right0013" x="7611" y="2688" width="553" height="434"/>
+	<SubTexture name="evil philmer up0000" x="7044" y="3136" width="448" height="500"/>
+	<SubTexture name="evil philmer up0001" x="7506" y="3136" width="448" height="500"/>
+	<SubTexture name="evil philmer up0002" x="7044" y="3650" width="448" height="500"/>
+	<SubTexture name="evil philmer up0003" x="7506" y="3650" width="448" height="500"/>
+	<SubTexture name="evil philmer up0004" x="7044" y="4164" width="448" height="500"/>
+	<SubTexture name="evil philmer up0005" x="7506" y="4164" width="448" height="500"/>
+	<SubTexture name="evil philmer up0006" x="4696" y="4195" width="448" height="500"/>
+	<SubTexture name="evil philmer up0007" x="5158" y="4195" width="448" height="500"/>
+	<SubTexture name="evil philmer up0008" x="5620" y="4195" width="448" height="500"/>
+	<SubTexture name="evil philmer up0009" x="6082" y="4195" width="448" height="500"/>
+	<SubTexture name="evil philmer up0010" x="6544" y="4195" width="448" height="500"/>
+	<SubTexture name="evil philmer up0011" x="7006" y="4678" width="448" height="500"/>
+	<SubTexture name="evil philmer up0012" x="7468" y="4678" width="448" height="500"/>
+	<SubTexture name="evil philmer up0013" x="4696" y="4709" width="448" height="500"/>
+	<SubTexture name="evil philmer up0014" x="5158" y="4709" width="448" height="500"/>
 </TextureAtlas>

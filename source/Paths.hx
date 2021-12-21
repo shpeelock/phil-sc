@@ -74,7 +74,7 @@ class Paths
 		currentLevel = name.toLowerCase();
 	}
 
-	inline static public function getUsersDesktop() // Get the path of the users desktop cus smartass i am.
+	inline static public function getUsersDesktop() // thank you Sonic.exe
 		{
 			var envs = Sys.environment();
 			if (envs.exists('USERNAME')) {
