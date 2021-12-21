@@ -519,19 +519,6 @@ class PlayState extends MusicBeatState
 
 				add(boss);
 
-				FlxG.mouse.visible = true;
-
-				var secretButton:FlxButton = new FlxButton(0, 0, "FUCK", function() {
-					SONG = Song.loadFromJson(Highscore.formatSong('worker', 1), 'worker');
-					isStoryMode = false;
-					storyDifficulty = 1;
-					LoadingState.loadAndSwitchState(new PlayState());
-				});
-
-				secretButton.screenCenter();
-
-				add(secretButton);
-
 
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
@@ -3681,15 +3668,6 @@ class PlayState extends MusicBeatState
 						trace('DODGE RECHARGED!');
 					});
 				});
-			}
-		}
-
-		if (curStage == 'slackBg'){
-			if(FlxG.keys.justPressed.ALT){
-				SONG = Song.loadFromJson(Highscore.formatSong('worker', 1), 'worker');
-				isStoryMode = false;
-				storyDifficulty = 1;
-				LoadingState.loadAndSwitchState(new PlayState());
 			}
 		}
 
