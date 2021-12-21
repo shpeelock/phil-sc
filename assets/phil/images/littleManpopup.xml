@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="littleManpopup.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="popup open0000" x="0" y="0" width="461" height="237"/>
+	<SubTexture name="popup open0001" x="461" y="0" width="461" height="237"/>
+	<SubTexture name="popup open0002" x="922" y="0" width="461" height="237"/>
+	<SubTexture name="popup open0003" x="1383" y="0" width="461" height="237"/>
+	<SubTexture name="popup open0004" x="0" y="237" width="461" height="237"/>
+	<SubTexture name="popup open0005" x="461" y="237" width="461" height="237"/>
+	<SubTexture name="popup open0006" x="922" y="237" width="461" height="237"/>
+	<SubTexture name="popup open0007" x="1383" y="237" width="461" height="237"/>
+	<SubTexture name="popup open0008" x="0" y="474" width="461" height="237"/>
+	<SubTexture name="popup open0009" x="461" y="474" width="461" height="237"/>
+	<SubTexture name="popup open0010" x="922" y="474" width="461" height="237"/>
+	<SubTexture name="popup open0011" x="1383" y="474" width="461" height="237"/>
+	<SubTexture name="popup open0012" x="0" y="711" width="461" height="237"/>
+	<SubTexture name="popup open0013" x="461" y="711" width="461" height="237"/>
+	<SubTexture name="popup open0014" x="922" y="711" width="461" height="237"/>
+	<SubTexture name="popup open0015" x="1383" y="711" width="461" height="237"/>
+	<SubTexture name="popup open0016" x="0" y="948" width="461" height="237"/>
+	<SubTexture name="popup open0017" x="461" y="948" width="461" height="237"/>
+	<SubTexture name="popup open0018" x="922" y="948" width="461" height="237"/>
+	<SubTexture name="popup open0019" x="1383" y="948" width="461" height="237"/>
+	<SubTexture name="popup open0020" x="0" y="1185" width="461" height="237"/>
+	<SubTexture name="popup open0021" x="461" y="1185" width="461" height="237"/>
+	<SubTexture name="popup open0022" x="922" y="1185" width="461" height="237"/>
+	<SubTexture name="popup open0023" x="1383" y="1185" width="461" height="237"/>
+	<SubTexture name="popup open0024" x="0" y="1422" width="461" height="237"/>
+	<SubTexture name="popup open0025" x="461" y="1422" width="461" height="237"/>
+	<SubTexture name="popup open0026" x="922" y="1422" width="461" height="237"/>
+	<SubTexture name="popup open0027" x="1383" y="1422" width="461" height="237"/>
+</TextureAtlas>

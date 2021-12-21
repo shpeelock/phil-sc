@@ -4038,6 +4038,30 @@ class PlayState extends MusicBeatState
 		if(nooooArrow < 10){
 			nooooArrow++;
 			camHUD.alpha -= 0.1;
+		} else {
+			var popupthing:FlxSprite = new FlxSprite(878.35, 345.95);
+			var popupthingLoop:FlxSprite = new FlxSprite(popupthing.x, popupthing.y);
+			popupthing.scale.set(1.4,1.4);
+			popupthingLoop.scale.set(1.4,1.4);
+			popupthing.frames = Paths.getSparrowAtlas('littleManpopup', 'phil');
+			popupthingLoop.frames = Paths.getSparrowAtlas('littleManpopuploop', 'phil');
+			popupthing.animation.addByPrefix('open', 'popup open', 24, false);
+			popupthingLoop.animation.addByPrefix('idle', 'popup', 24, true);
+	
+			popupthing.antialiasing = true;
+			popupthing.cameras = [camGame];
+
+			popupthingLoop.antialiasing = true;
+			popupthingLoop.cameras = [camGame];
+
+			add(popupthing);
+			FlxG.sound.play(Paths.sound('popup', 'phil'));
+			popupthing.animation.play('open', true);
+			new FlxTimer().start(1, function(tmr:FlxTimer){
+				remove(popupthing);
+				add(popupthingLoop);
+				popupthingLoop.animation.play('idle', true);
+			});
 		}
 	}
 

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="littleManpopuploop.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="popup0000" x="0" y="0" width="284" height="224"/>
+	<SubTexture name="popup0001" x="284" y="0" width="284" height="224"/>
+	<SubTexture name="popup0002" x="568" y="0" width="284" height="224"/>
+	<SubTexture name="popup0003" x="0" y="224" width="284" height="224"/>
+	<SubTexture name="popup0004" x="0" y="448" width="284" height="224"/>
+	<SubTexture name="popup0005" x="0" y="672" width="284" height="224"/>
+	<SubTexture name="popup0006" x="284" y="224" width="284" height="224"/>
+	<SubTexture name="popup0007" x="568" y="224" width="284" height="224"/>
+	<SubTexture name="popup0008" x="284" y="448" width="284" height="224"/>
+	<SubTexture name="popup0009" x="284" y="672" width="284" height="224"/>
+</TextureAtlas>
