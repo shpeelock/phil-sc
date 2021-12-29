@@ -1,0 +1,50 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		120,
+		60
+	],
+	"scale": 1.7,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				-1,
+				-1
+			],
+			"loop_name": "phil talking",
+			"idle_name": "phil talking0014"
+		},
+		{
+			"loop_offsets": [
+				17,
+				-21
+			],
+			"anim": "pissed",
+			"idle_offsets": [
+				17,
+				-21
+			],
+			"loop_name": "phil angry",
+			"idle_name": "phil angry0014"
+		},
+		{
+			"loop_name": "phil akward",
+			"idle_offsets": [
+				16,
+				-20
+			],
+			"idle_name": "phil akward0014",
+			"anim": "akward",
+			"loop_offsets": [
+				16,
+				-20
+			]
+		}
+	],
+	"image": "phil-diag"
+}

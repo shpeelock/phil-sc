@@ -191,6 +191,8 @@ class PlayState extends MusicBeatState
 	var lilmanSpike:FlxSprite = new FlxSprite();
 	var boss:FlxSprite = new FlxSprite();
 	var ohHellnah:FlxSprite = new FlxSprite();
+	var philbg:FlxSprite;
+
 	var phillyCityLights:FlxTypedGroup<BGSprite>;
 	var phillyTrain:BGSprite;
 	var blammedLightsBlack:ModchartSprite;
@@ -399,10 +401,10 @@ class PlayState extends MusicBeatState
 			case 'philBg':
 				var white:FlxSprite = new FlxSprite().makeGraphic(FlxG.width * 5000, 1000, FlxColor.WHITE);
 				add(white);
-				var bg:FlxSprite = new FlxSprite(-136, -179.1).loadGraphic(Paths.image('stagePhil/philbg', 'phil'));
-				bg.antialiasing = true;
-				add(bg);
-				bg.scale.set(0.7, 0.7);
+				philbg = new FlxSprite(-136, -179.1).loadGraphic(Paths.image('stagePhil/philbg', 'phil'));
+				philbg.antialiasing = true;
+				add(philbg);
+				philbg.scale.set(0.7, 0.7);
 
 			case 'blosimsBg':
 				var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('stagePhil/blosimsBg', 'phil'));
@@ -1270,6 +1272,10 @@ class PlayState extends MusicBeatState
 					if(daSong == 'roses') FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
 
+				case 'phils':
+					startDialogue(dialogueJson);
+				case 'slack':
+					startDialogue(dialogueJson);
 				default:
 					startCountdown();
 			}
@@ -3346,14 +3352,15 @@ class PlayState extends MusicBeatState
 				if (storyPlaylist.length <= 0)
 				{
 
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+						FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
-					cancelFadeTween();
-					CustomFadeTransition.nextCamera = camOther;
-					if(FlxTransitionableState.skipNextTransIn) {
-						CustomFadeTransition.nextCamera = null;
-					}
-					MusicBeatState.switchState(new StoryMenuState());
+						cancelFadeTween();
+						CustomFadeTransition.nextCamera = camOther;
+						if(FlxTransitionableState.skipNextTransIn) {
+							CustomFadeTransition.nextCamera = null;
+						}
+						MusicBeatState.switchState(new StoryMenuState());
+
 
 					// if ()
 					if(!usedPractice) {
@@ -3405,7 +3412,56 @@ class PlayState extends MusicBeatState
 							//resetSpriteCache = true;
 							LoadingState.loadAndSwitchState(new PlayState());
 						});
-					} else {
+					} 
+					else if (curSong.toLowerCase() == 'phils'){
+
+						moveCamera(true);
+						isCameraOnForcedPos = true;
+						camHUD.alpha = 0;
+						dad.alpha = 0;
+						var city:FlxSound;
+						city = new FlxSound().loadEmbedded(Paths.sound('city', 'phil'));
+						city.play();
+						city.volume = 2;
+						FlxG.sound.list.add(city);
+						
+						var philisinDanger:FlxSprite;
+						philisinDanger = new FlxSprite(dad.x, dad.y);
+						philisinDanger.frames = Paths.getSparrowAtlas('CUTSCENE SHIT/phil-slackCutscene', 'phil');
+						philisinDanger.animation.addByPrefix('idle',"phil slack cutscene", 24, false);
+						philisinDanger.animation.play('idle');
+						philisinDanger.antialiasing = true;
+						add(philisinDanger);
+
+						camFollow.x -= 150;
+
+						philisinDanger.animation.callback = function(idle, frameNumber:Int, frameIndex:Int)
+							{
+								if (frameNumber == 23)
+									{
+										FlxTween.tween(philbg, {alpha: 0}, 1, {ease: FlxEase.quartOut});
+										FlxTween.tween(FlxG.camera, {zoom: 0.9}, 1, {ease: FlxEase.quartOut});
+										FlxG.camera.flash(FlxColor.RED, 1);
+									}
+								if (frameNumber == 50)
+									{
+										FlxG.camera.shake(0.02, 2);
+										FlxG.camera.fade(FlxColor.WHITE, 2);
+									}
+						
+							}
+	
+						philisinDanger.animation.finishCallback = function(idle)
+							{
+								cancelFadeTween();
+								CustomFadeTransition.nextCamera = camOther;
+								if(FlxTransitionableState.skipNextTransIn) {
+									CustomFadeTransition.nextCamera = null;
+								}
+								LoadingState.loadAndSwitchState(new PlayState());
+							}
+					}
+					else {
 						cancelFadeTween();
 						//resetSpriteCache = true;
 						LoadingState.loadAndSwitchState(new PlayState());

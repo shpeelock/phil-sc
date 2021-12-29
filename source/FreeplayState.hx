@@ -42,6 +42,7 @@ class FreeplayState extends MusicBeatState
 	private var iconArray:Array<HealthIcon> = [];
 
 	var bg:FlxSprite;
+	var bloxiam:FlxSprite;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
 
@@ -92,6 +93,11 @@ class FreeplayState extends MusicBeatState
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
+
+		bloxiam = new FlxSprite().loadGraphic(Paths.image('blosim', 'phil'));
+		bloxiam.antialiasing = ClientPrefs.globalAntialiasing;
+		add(bloxiam);
+		bloxiam.alpha = 0;
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);
@@ -302,6 +308,17 @@ class FreeplayState extends MusicBeatState
 			openSubState(new ResetScoreSubState(songs[curSelected].songName, curDifficulty, songs[curSelected].songCharacter));
 			FlxG.sound.play(Paths.sound('scrollMenu'));
 		}
+
+
+		if (songs[curSelected].songName.toLowerCase() == 'blosims'){
+			bg.alpha = 0;
+			bloxiam.alpha = 1;
+		} else {
+			bg.alpha = 1;
+			bloxiam.alpha = 0;
+		}
+
+
 		super.update(elapsed);
 	}
 

@@ -1,53 +1,53 @@
 {
 	"dialogue": [
 		{
-			"speed": 0.05,
-			"portrait": "bf",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "yoyo bitch its me boyfriend from friday"
+			"text": "yoyo bitch its me boyfriend from friday",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "gf",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "what the fuck are you doing in my office"
+			"text": "what the fuck are you doing in my office",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "phil-diag"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "gf",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "im uhhhhh Working very hard!"
+			"text": "im uhhhhh Working very hard!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "phil-diag"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "bf",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "You've been staring at that poster behind you for an hour"
+			"text": "You've been staring at that poster behind you for an hour",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "gf",
+			"expression": "akward",
+			"text": "how did you know",
 			"boxState": "normal",
-			"expression": "talk",
-			"text": "how did you know"
+			"speed": 0.05,
+			"portrait": "phil-diag"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "bf",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "rap battle"
+			"text": "rap battle",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "gf",
+			"expression": "pissed",
+			"text": "i dont like you already",
 			"boxState": "normal",
-			"expression": "talk",
-			"text": "i dont like you already"
+			"speed": 0.05,
+			"portrait": "phil-diag"
 		}
 	]
 }

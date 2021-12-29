@@ -1,39 +1,67 @@
 {
 	"dialogue": [
 		{
-			"speed": 0.05,
-			"portrait": "gf",
-			"boxState": "normal",
 			"expression": "demon",
-			"text": "PHIL!!! WHY AREN'T YOU WORKING!!! YOU HAVE TO FINISH A REPORT IN 3 HOURS!!"
+			"text": "PHIL!!! WHY AREN'T YOU WORKING!!! YOU HAVE TO FINISH A REPORT IN 3 HOURS!!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "demon",
+			"text": "YOU'RE FIRED!!! YOU'VE PISSED ME OFF WITH YOUR SLACKING!!!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "demon",
+			"text": "AND THAT KID BESIDE YOU, IS THAT THE REASON I HEARD THOSE HORRIBLE SOUNDS?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "talk",
+			"text": "uhmmmmmm i just wanted to rap battle :3",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "demon",
+			"text": "SO THAT'S WHY YOU WERE SLACKING?! IM GONNA KILL THE BOTH OF YOU NOW!!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "gf"
 		},
 		{
 			"speed": 0.05,
 			"portrait": "gf",
 			"boxState": "normal",
 			"expression": "demon",
-			"text": "YOU'RE FIRED!!! YOU'VE PISSED ME OFF WITH YOUR SLACKING!!!"
-		},
-		{
-			"speed": 0.05,
-			"portrait": "gf",
-			"boxState": "normal",
-			"expression": "demon",
-			"text": "AND THAT KID BESIDE YOU, HES ALSO GOING TO BE KILLED."
+			"text": "YOU ARE ALL DISMISSED... IN HELL!!!!"
 		},
 		{
 			"speed": 0.05,
 			"portrait": "bf",
 			"boxState": "normal",
 			"expression": "talk",
-			"text": "bro smh this guy really underestimating the laws of Friday Night Funkin"
+			"text": "smh this demon really understimating the laws of friday night funkin bro.."
 		},
 		{
 			"speed": 0.05,
-			"portrait": "gf",
+			"portrait": "phil-diag",
 			"boxState": "normal",
 			"expression": "talk",
-			"text": "what the fuck is wrong with you"
+			"text": "guess theres no choice but to fight him now"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "phil-diag",
+			"boxState": "normal",
+			"expression": "pissed",
+			"text": "i still hate you"
 		}
 	]
 }

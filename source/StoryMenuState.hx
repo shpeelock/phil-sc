@@ -44,6 +44,8 @@ class StoryMenuState extends MusicBeatState
 
 	var grpLocks:FlxTypedGroup<FlxSprite>;
 
+	var video:MP4Handler = new MP4Handler();
+
 	var difficultySelectors:FlxGroup;
 	var sprDifficultyGroup:FlxTypedGroup<FlxSprite>;
 	var leftArrow:FlxSprite;
@@ -296,8 +298,16 @@ class StoryMenuState extends MusicBeatState
 			PlayState.campaignMisses = 0;
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
-				LoadingState.loadAndSwitchState(new PlayState(), true);
-				FreeplayState.destroyFreeplayVocals();
+				if (PlayState.SONG.song.toLowerCase() == 'phils')
+					{
+						var video:MP4Handler = new MP4Handler();
+						video.playMP4(Paths.video('phil cutscene intro'), new PlayState()); 
+					}
+					else
+					{
+						LoadingState.loadAndSwitchState(new PlayState(), true);
+						FreeplayState.destroyFreeplayVocals();
+					}
 			});
 		} else {
 			FlxG.sound.play(Paths.sound('cancelMenu'));
