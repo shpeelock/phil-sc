@@ -3352,6 +3352,33 @@ class PlayState extends MusicBeatState
 				if (storyPlaylist.length <= 0)
 				{
 
+					//Slack cutscene
+					if (curSong.toLowerCase() == 'slack'){
+
+						var rumble = new FlxSound().loadEmbedded(Paths.sound('rumble', 'phil'));
+						rumble.play();
+						rumble.volume = 20;
+
+						camHUD.alpha = 0;
+						FlxG.camera.shake(0.02, 4);
+						FlxG.camera.fade(FlxColor.WHITE, 4);
+
+						new FlxTimer().start(4, function(tmr:FlxTimer)
+							{
+								FlxG.sound.playMusic(Paths.music('freakyMenu'));
+
+								cancelFadeTween();
+								CustomFadeTransition.nextCamera = camOther;
+								if(FlxTransitionableState.skipNextTransIn) {
+									CustomFadeTransition.nextCamera = null;
+								}
+								MusicBeatState.switchState(new StoryMenuState());
+							});
+
+
+					}
+					else
+					{
 						FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
 						cancelFadeTween();
@@ -3360,7 +3387,7 @@ class PlayState extends MusicBeatState
 							CustomFadeTransition.nextCamera = null;
 						}
 						MusicBeatState.switchState(new StoryMenuState());
-
+					}
 
 					// if ()
 					if(!usedPractice) {
@@ -3413,17 +3440,22 @@ class PlayState extends MusicBeatState
 							LoadingState.loadAndSwitchState(new PlayState());
 						});
 					} 
+					//Phils cutscene
 					else if (curSong.toLowerCase() == 'phils'){
 
 						moveCamera(true);
 						isCameraOnForcedPos = true;
 						camHUD.alpha = 0;
 						dad.alpha = 0;
-						var city:FlxSound;
-						city = new FlxSound().loadEmbedded(Paths.sound('city', 'phil'));
+						var alertCall = new FlxSound().loadEmbedded(Paths.sound('alert call', 'phil'));
+						var rumble = new FlxSound().loadEmbedded(Paths.sound('rumble', 'phil'));
+						var city = new FlxSound().loadEmbedded(Paths.sound('city', 'phil'), true);
+						
 						city.play();
-						city.volume = 2;
-						FlxG.sound.list.add(city);
+
+						city.volume = 5;
+						alertCall.volume = 20;
+						rumble.volume = 20;
 						
 						var philisinDanger:FlxSprite;
 						philisinDanger = new FlxSprite(dad.x, dad.y);
@@ -3439,9 +3471,11 @@ class PlayState extends MusicBeatState
 							{
 								if (frameNumber == 23)
 									{
+										alertCall.play();
 										FlxTween.tween(philbg, {alpha: 0}, 1, {ease: FlxEase.quartOut});
 										FlxTween.tween(FlxG.camera, {zoom: 0.9}, 1, {ease: FlxEase.quartOut});
 										FlxG.camera.flash(FlxColor.RED, 1);
+										rumble.play();
 									}
 								if (frameNumber == 50)
 									{
