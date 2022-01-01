@@ -1183,7 +1183,8 @@ class PlayState extends MusicBeatState
 					//worker cutscene
 					case "worker":
 
-						inCutscene = true;
+						cancelFadeTween();
+						CustomFadeTransition.nextCamera = camOther;
 
 						healthBarBG.alpha = 0;
 						healthBar.alpha = 0;
@@ -1249,9 +1250,6 @@ class PlayState extends MusicBeatState
 	
 						engaged.animation.finishCallback = function(idle)
 							{
-
-								inCutscene = false;
-
 								remove(engaged);
 								remove(philOhshit);
 								philScared.alpha = 1;
@@ -1275,7 +1273,16 @@ class PlayState extends MusicBeatState
 				case 'phils':
 					startDialogue(dialogueJson);
 				case 'slack':
-					startDialogue(dialogueJson);
+					cancelFadeTween();
+					CustomFadeTransition.nextCamera = camOther;
+					if(FlxTransitionableState.skipNextTransIn) {
+						CustomFadeTransition.nextCamera = null;
+					}
+					new FlxTimer().start(1, function(tmr:FlxTimer){
+						startDialogue(dialogueJson);
+					});
+				case 'little-revenge':
+					startVideo('little revenge cutscene');
 				default:
 					startCountdown();
 			}
@@ -3374,6 +3381,63 @@ class PlayState extends MusicBeatState
 								}
 								MusicBeatState.switchState(new StoryMenuState());
 							});
+
+
+					}
+					else if (curSong.toLowerCase() == 'little-revenge'){
+
+						moveCamera(true);
+
+						var city = new FlxSound().loadEmbedded(Paths.sound('city', 'phil'));
+						city.play();
+						city.volume = 20;
+
+						camHUD.alpha = 0;
+						dad.alpha = 0;
+
+						var lilmanLooksAtTheCam:FlxSprite;
+						lilmanLooksAtTheCam = new FlxSprite(dad.x, dad.y);
+						lilmanLooksAtTheCam.frames = Paths.getSparrowAtlas('CUTSCENE SHIT/little-revengeEnd', 'phil');
+						lilmanLooksAtTheCam.animation.addByPrefix('idle',"special", 24, false);
+						lilmanLooksAtTheCam.animation.play('idle');
+						lilmanLooksAtTheCam.antialiasing = true;
+						add(lilmanLooksAtTheCam);
+
+						lilmanLooksAtTheCam.animation.callback = function(idle, frameNumber:Int, frameIndex:Int)
+							{
+								if (frameNumber == 21)
+									{
+										FlxG.sound.play(Paths.sound('spookyRiser', 'phil'));
+									}
+								if (frameNumber == 25)
+									{
+										moveCamera(true);
+										FlxTween.tween(FlxG.camera, {zoom: 1.6}, 2, {ease: FlxEase.quartOut});
+									}
+								if (frameNumber == 49)
+									{
+										FlxG.sound.play(Paths.sound('Lights_Shut_off'));
+										var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom -FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+										blackShit.scrollFactor.set();
+										blackShit.screenCenter();
+										blackShit.alpha = 0;
+										add(blackShit);
+
+										FlxTween.tween(blackShit, {alpha: 1}, 0.05, {ease: FlxEase.quartIn});
+									}
+						
+							}
+	
+							lilmanLooksAtTheCam.animation.finishCallback = function(idle)
+							{
+								cancelFadeTween();
+								CustomFadeTransition.nextCamera = camOther;
+								if(FlxTransitionableState.skipNextTransIn) {
+									CustomFadeTransition.nextCamera = null;
+								}
+								var video:MP4Handler = new MP4Handler();
+								video.playMP4(Paths.video('Outro'), new MainMenuState()); 
+							}
 
 
 					}

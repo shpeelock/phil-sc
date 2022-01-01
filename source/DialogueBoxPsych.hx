@@ -522,8 +522,10 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		box.updateHitbox();
 		if(box.animation.curAnim.name.startsWith('angry')) {
 			box.offset.set(50, 65);
+			FlxG.camera.shake(0.02);
 		} else if(box.animation.curAnim.name.startsWith('center-angry')) {
 			box.offset.set(50, 30);
+			FlxG.camera.shake(0.02);
 		} else {
 			box.offset.set(10, 0);
 		}

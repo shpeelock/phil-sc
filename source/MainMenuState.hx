@@ -29,7 +29,10 @@ class MainMenuState extends MusicBeatState
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
+	private var camMoreUI:FlxCamera;
 	private var camAchievement:FlxCamera;
+
+	var phil:FlxSprite;
 	
 	var optionShit:Array<String> = ['story_mode', 'freeplay', 'options'];
 
@@ -44,12 +47,18 @@ class MainMenuState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
+
+
 		camGame = new FlxCamera();
 		camAchievement = new FlxCamera();
+		camMoreUI = new FlxCamera();
 		camAchievement.bgColor.alpha = 0;
+		camMoreUI.bgColor.alpha = 0;
 
 		FlxG.cameras.reset(camGame);
 		FlxG.cameras.add(camAchievement);
+		FlxG.cameras.add(camMoreUI);
+
 		FlxCamera.defaultCameras = [camGame];
 
 		transIn = FlxTransitionableState.defaultTransIn;
@@ -58,29 +67,23 @@ class MainMenuState extends MusicBeatState
 		persistentUpdate = persistentDraw = true;
 
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
-		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('menuBG'));
-		bg.scrollFactor.set(0, yScroll);
-		bg.setGraphicSize(Std.int(bg.width * 1.175));
-		bg.updateHitbox();
-		bg.screenCenter();
-		bg.antialiasing = ClientPrefs.globalAntialiasing;
-		add(bg);
+		var whiteShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom, -FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.WHITE);
+		whiteShit.scrollFactor.set();
+		add(whiteShit);
+
+		phil = new FlxSprite(557.75, -232.55);
+		phil.frames = Paths.getSparrowAtlas('phil-menu', 'phil');
+		phil.animation.addByPrefix('idle', 'phil idle', 24, true);
+		phil.animation.play('idle');
+		phil.updateHitbox();
+		phil.scrollFactor.set(0.1, 0.1);
+		phil.antialiasing = true;
+		add(phil);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		camFollowPos = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
 		add(camFollowPos);
-
-		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
-		magenta.scrollFactor.set(0, yScroll);
-		magenta.setGraphicSize(Std.int(magenta.width * 1.175));
-		magenta.updateHitbox();
-		magenta.screenCenter();
-		magenta.visible = false;
-		magenta.antialiasing = ClientPrefs.globalAntialiasing;
-		magenta.color = 0xFFfd719b;
-		add(magenta);
-		// magenta.scrollFactor.set();
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
@@ -88,13 +91,14 @@ class MainMenuState extends MusicBeatState
 		for (i in 0...optionShit.length)
 		{
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(0, (i * 140)  + offset);
+			var menuItem:FlxSprite = new FlxSprite(50, (i * 140)  + offset);
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
+			menuItem.scale.set(0.8, 0.8);
+			menuItem.y += 50;
 			menuItem.ID = i;
-			menuItem.screenCenter(X);
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
@@ -122,15 +126,16 @@ class MainMenuState extends MusicBeatState
 		#if ACHIEVEMENTS_ALLOWED
 		Achievements.loadAchievements();
 		var leDate = Date.now();
-		if (leDate.getDay() == 5 && leDate.getHours() >= 18) {
-			var achieveID:Int = Achievements.getAchievementIndex('friday_night_play');
-			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) { //It's a friday night. WEEEEEEEEEEEEEEEEEE
-				Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
-				giveAchievement();
-				ClientPrefs.saveSettings();
-			}
+		if (!Achievements.achievementsUnlocked[achievementID][1] && leDate.getDay() == 5 && leDate.getHours() >= 18) { //It's a friday night. WEEEEEEEEEEEEEEEEEE
+			Achievements.achievementsUnlocked[achievementID][1] = true;
+			giveAchievement();
+			ClientPrefs.saveSettings();
 		}
 		#end
+
+		// shittyBlood = new FlxSprite(10, 0);
+		// shittyBlood.loadGraphic(Paths.image('selectBloodshit'));
+		// add(shittyBlood);
 
 		super.create();
 	}
@@ -148,6 +153,7 @@ class MainMenuState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
+		
 		if (FlxG.sound.music.volume < 0.8)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
@@ -238,9 +244,32 @@ class MainMenuState extends MusicBeatState
 		super.update(elapsed);
 
 		menuItems.forEach(function(spr:FlxSprite)
-		{
-			spr.screenCenter(X);
-		});
+			{
+				/*
+				if (curSelected == spr.ID)
+				{
+					// shittyBlood.y = spr.getGraphicMidpoint().y + spr.frameHeight / 2;
+					spr.x = 135;
+					// shittyBlood.x = menuItems.members[0].x;
+				}
+				else 
+				{
+					spr.x = 25;
+				}
+				*/
+				/*
+	
+					if (curSelected == spr.ID - 1)
+					{
+						spr.x = 93;
+					}
+	
+					if (curSelected == spr.ID + 1)
+					{
+						spr.x = 93;
+					} 
+				*/
+			});
 	}
 
 	function changeItem(huh:Int = 0)
@@ -262,8 +291,8 @@ class MainMenuState extends MusicBeatState
 			{
 				spr.animation.play('selected');
 				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y);
-				spr.offset.x = 0.15 * (spr.frameWidth / 2 + 180);
-				spr.offset.y = 0.15 * spr.frameHeight;
+				//spr.offset.x = 0.15 * (spr.frameWidth / 2 + 180);
+				//spr.offset.y = 0.15 * spr.frameHeight;
 				FlxG.log.add(spr.frameWidth);
 			}
 		});

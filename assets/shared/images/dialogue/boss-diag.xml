@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="boss-diag.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Idle0000" x="0" y="6186" width="841" height="915"/>
+	<SubTexture name="Idle0001" x="0" y="7141" width="841" height="915"/>
+	<SubTexture name="Idle0002" x="881" y="6186" width="841" height="915"/>
+	<SubTexture name="Idle0003" x="881" y="7141" width="841" height="915"/>
+	<SubTexture name="Idle0004" x="910" y="0" width="841" height="915"/>
+	<SubTexture name="Idle0005" x="910" y="955" width="841" height="915"/>
+	<SubTexture name="Idle0006" x="910" y="1910" width="841" height="915"/>
+	<SubTexture name="Idle0007" x="910" y="2865" width="841" height="915"/>
+	<SubTexture name="Idle0008" x="910" y="3820" width="841" height="915"/>
+	<SubTexture name="Idle0009" x="910" y="4775" width="841" height="915"/>
+	<SubTexture name="Idle0010" x="1762" y="5730" width="841" height="915"/>
+	<SubTexture name="Idle0011" x="1762" y="6685" width="841" height="915"/>
+	<SubTexture name="Idle0012" x="1791" y="0" width="841" height="915"/>
+	<SubTexture name="Idle0013" x="1791" y="955" width="841" height="915"/>
+	<SubTexture name="Idle0014" x="1791" y="1910" width="841" height="915"/>
+	<SubTexture name="Idle0015" x="1791" y="2865" width="841" height="915"/>
+	<SubTexture name="Idle0016" x="1791" y="3820" width="841" height="915"/>
+	<SubTexture name="Idle0017" x="1791" y="4775" width="841" height="915"/>
+	<SubTexture name="Idle0018" x="2643" y="5730" width="841" height="915"/>
+	<SubTexture name="Idle0019" x="2643" y="6685" width="841" height="915"/>
+	<SubTexture name="Idle0020" x="2672" y="0" width="841" height="915"/>
+	<SubTexture name="Idle0021" x="2672" y="955" width="841" height="915"/>
+	<SubTexture name="Idle0022" x="2672" y="1910" width="841" height="915"/>
+	<SubTexture name="Idle0023" x="2672" y="2865" width="841" height="915"/>
+	<SubTexture name="Talk0000" x="0" y="0" width="870" height="991"/>
+	<SubTexture name="Talk0001" x="0" y="1031" width="870" height="991"/>
+	<SubTexture name="Talk0002" x="0" y="2062" width="870" height="991"/>
+	<SubTexture name="Talk0003" x="0" y="3093" width="870" height="991"/>
+	<SubTexture name="Talk0004" x="0" y="4124" width="870" height="991"/>
+	<SubTexture name="Talk0005" x="0" y="5155" width="870" height="991"/>
+</TextureAtlas>

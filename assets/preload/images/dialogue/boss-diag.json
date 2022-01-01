@@ -1,0 +1,24 @@
+{
+	"dialogue_pos": "right",
+	"position": [
+		-150,
+		80
+	],
+	"scale": 1,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				571,
+				410
+			],
+			"idle_offsets": [
+				570,
+				409
+			],
+			"loop_name": "Talk",
+			"idle_name": "Talk0005"
+		}
+	],
+	"image": "boss-diag"
+}
