@@ -42,6 +42,7 @@ class FreeplayState extends MusicBeatState
 	private var iconArray:Array<HealthIcon> = [];
 
 	var bg:FlxSprite;
+	var philbg:FlxSprite;
 	var bloxiam:FlxSprite;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
@@ -90,8 +91,21 @@ class FreeplayState extends MusicBeatState
 
 		// LOAD CHARACTERS
 
+		philbg = new FlxSprite(0, 0);
+		philbg.frames = Paths.getSparrowAtlas('freeplaybg-phil', 'phil');
+		philbg.animation.addByPrefix('boppy', 'freeplay-bg', 24, true);
+		philbg.animation.play('boppy');
+		philbg.scrollFactor.x = 0;
+		philbg.scrollFactor.y = 0.10;
+		philbg.setGraphicSize(Std.int(philbg.width * 1.1));
+		philbg.updateHitbox();
+		philbg.screenCenter();
+		philbg.antialiasing = true;
+		add(philbg);
+
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
+		bg.visible = false;
 		add(bg);
 
 		bloxiam = new FlxSprite().loadGraphic(Paths.image('blosim', 'phil'));
@@ -311,10 +325,10 @@ class FreeplayState extends MusicBeatState
 
 
 		if (songs[curSelected].songName.toLowerCase() == 'blosims'){
-			bg.alpha = 0;
+			philbg.alpha = 0;
 			bloxiam.alpha = 1;
 		} else {
-			bg.alpha = 1;
+			philbg.alpha = 1;
 			bloxiam.alpha = 0;
 		}
 

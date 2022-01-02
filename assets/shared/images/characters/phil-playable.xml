@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="phil-playable.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="phil Down0000" x="4943" y="2044" width="397" height="329"/>
+	<SubTexture name="phil Down0001" x="5380" y="2044" width="397" height="329"/>
+	<SubTexture name="phil Down0002" x="5817" y="2044" width="397" height="329"/>
+	<SubTexture name="phil Down0003" x="6254" y="2044" width="397" height="329"/>
+	<SubTexture name="phil Down0004" x="6691" y="2044" width="397" height="329"/>
+	<SubTexture name="phil Down0005" x="2913" y="2047" width="397" height="329"/>
+	<SubTexture name="phil Down0006" x="7128" y="2053" width="397" height="329"/>
+	<SubTexture name="phil Down0007" x="7565" y="2053" width="397" height="329"/>
+	<SubTexture name="phil Down0008" x="0" y="2054" width="397" height="329"/>
+	<SubTexture name="phil Down0009" x="437" y="2054" width="397" height="329"/>
+	<SubTexture name="phil Down0010" x="874" y="2054" width="397" height="329"/>
+	<SubTexture name="phil Down0011" x="1311" y="2054" width="397" height="329"/>
+	<SubTexture name="phil Down left0000" x="1748" y="2054" width="391" height="332"/>
+	<SubTexture name="phil Down left0001" x="2179" y="2062" width="391" height="332"/>
+	<SubTexture name="phil Down left0002" x="4943" y="2413" width="391" height="332"/>
+	<SubTexture name="phil Down left0003" x="5374" y="2413" width="391" height="332"/>
+	<SubTexture name="phil Down left0004" x="5805" y="2413" width="391" height="332"/>
+	<SubTexture name="phil Down left0005" x="6236" y="2413" width="391" height="332"/>
+	<SubTexture name="phil Down left0006" x="6667" y="2413" width="391" height="332"/>
+	<SubTexture name="phil Down left0007" x="2610" y="2416" width="391" height="332"/>
+	<SubTexture name="phil Down left0008" x="3041" y="2416" width="391" height="332"/>
+	<SubTexture name="phil Down left0009" x="7098" y="2422" width="391" height="332"/>
+	<SubTexture name="phil Left0000" x="2913" y="1551" width="366" height="456"/>
+	<SubTexture name="phil Left0001" x="3319" y="1551" width="366" height="456"/>
+	<SubTexture name="phil Left0002" x="0" y="1558" width="366" height="456"/>
+	<SubTexture name="phil Left0003" x="406" y="1558" width="366" height="456"/>
+	<SubTexture name="phil Left0004" x="812" y="1558" width="366" height="456"/>
+	<SubTexture name="phil Left0005" x="1218" y="1558" width="366" height="456"/>
+	<SubTexture name="phil Left0006" x="1624" y="1558" width="366" height="456"/>
+	<SubTexture name="phil Left0007" x="2030" y="1558" width="366" height="456"/>
+	<SubTexture name="phil Left0008" x="3725" y="2032" width="366" height="456"/>
+	<SubTexture name="phil Left0009" x="4131" y="2044" width="366" height="456"/>
+	<SubTexture name="phil Left0010" x="4537" y="2044" width="366" height="456"/>
+	<SubTexture name="phil Left miss0000" x="4384" y="1533" width="365" height="471"/>
+	<SubTexture name="phil Left miss0001" x="4789" y="1533" width="365" height="471"/>
+	<SubTexture name="phil Left miss0002" x="5194" y="1533" width="365" height="471"/>
+	<SubTexture name="phil Left miss0003" x="5599" y="1533" width="365" height="471"/>
+	<SubTexture name="phil Left miss0004" x="6004" y="1533" width="365" height="471"/>
+	<SubTexture name="phil Left miss0005" x="6409" y="1533" width="365" height="471"/>
+	<SubTexture name="phil Left miss0006" x="6814" y="1533" width="365" height="471"/>
+	<SubTexture name="phil Left miss0007" x="7219" y="1542" width="365" height="471"/>
+	<SubTexture name="phil Left miss0008" x="7624" y="1542" width="365" height="471"/>
+	<SubTexture name="phil Left miss0009" x="2508" y="1551" width="365" height="471"/>
+	<SubTexture name="phil Right0000" x="2712" y="562" width="395" height="450"/>
+	<SubTexture name="phil Right0001" x="3147" y="562" width="395" height="450"/>
+	<SubTexture name="phil Right0002" x="3582" y="562" width="395" height="450"/>
+	<SubTexture name="phil Right0003" x="4017" y="1043" width="395" height="450"/>
+	<SubTexture name="phil Right0004" x="4452" y="1043" width="395" height="450"/>
+	<SubTexture name="phil Right0005" x="4887" y="1043" width="395" height="450"/>
+	<SubTexture name="phil Right0006" x="5322" y="1043" width="395" height="450"/>
+	<SubTexture name="phil Right0007" x="5757" y="1043" width="395" height="450"/>
+	<SubTexture name="phil Right0008" x="6192" y="1043" width="395" height="450"/>
+	<SubTexture name="phil Right0009" x="6627" y="1043" width="395" height="450"/>
+	<SubTexture name="phil Right0010" x="7062" y="1043" width="395" height="450"/>
+	<SubTexture name="phil Right miss0000" x="7497" y="1043" width="378" height="459"/>
+	<SubTexture name="phil Right miss0001" x="2712" y="1052" width="378" height="459"/>
+	<SubTexture name="phil Right miss0002" x="3130" y="1052" width="378" height="459"/>
+	<SubTexture name="phil Right miss0003" x="3548" y="1052" width="378" height="459"/>
+	<SubTexture name="phil Right miss0004" x="0" y="1059" width="378" height="459"/>
+	<SubTexture name="phil Right miss0005" x="418" y="1059" width="378" height="459"/>
+	<SubTexture name="phil Right miss0006" x="836" y="1059" width="378" height="459"/>
+	<SubTexture name="phil Right miss0007" x="1254" y="1059" width="378" height="459"/>
+	<SubTexture name="phil Right miss0008" x="1672" y="1059" width="378" height="459"/>
+	<SubTexture name="phil Right miss0009" x="2090" y="1059" width="378" height="459"/>
+	<SubTexture name="phil Right miss0010" x="3966" y="1533" width="378" height="459"/>
+	<SubTexture name="phil Up0000" x="0" y="0" width="364" height="522"/>
+	<SubTexture name="phil Up0001" x="404" y="0" width="364" height="522"/>
+	<SubTexture name="phil Up0002" x="808" y="0" width="364" height="522"/>
+	<SubTexture name="phil Up0003" x="1212" y="0" width="364" height="522"/>
+	<SubTexture name="phil Up0004" x="1616" y="0" width="364" height="522"/>
+	<SubTexture name="phil Up0005" x="2020" y="0" width="364" height="522"/>
+	<SubTexture name="phil Up0006" x="2424" y="0" width="364" height="522"/>
+	<SubTexture name="phil Up0007" x="2828" y="0" width="364" height="522"/>
+	<SubTexture name="phil Up0008" x="3232" y="0" width="364" height="522"/>
+	<SubTexture name="phil Up0009" x="3636" y="0" width="364" height="522"/>
+	<SubTexture name="phil Up miss0000" x="4040" y="0" width="375" height="506"/>
+	<SubTexture name="phil Up miss0001" x="4455" y="0" width="375" height="506"/>
+	<SubTexture name="phil Up miss0002" x="4870" y="0" width="375" height="506"/>
+	<SubTexture name="phil Up miss0003" x="5285" y="0" width="375" height="506"/>
+	<SubTexture name="phil Up miss0004" x="5700" y="0" width="375" height="506"/>
+	<SubTexture name="phil Up miss0005" x="6115" y="0" width="375" height="506"/>
+	<SubTexture name="phil Up miss0006" x="6530" y="0" width="375" height="506"/>
+	<SubTexture name="phil Up miss0007" x="6945" y="0" width="375" height="506"/>
+	<SubTexture name="phil Up miss0008" x="7360" y="0" width="375" height="506"/>
+	<SubTexture name="phil Up miss0009" x="7775" y="0" width="375" height="506"/>
+	<SubTexture name="phil idle0000" x="4040" y="546" width="412" height="457"/>
+	<SubTexture name="phil idle0001" x="4492" y="546" width="412" height="457"/>
+	<SubTexture name="phil idle0002" x="4944" y="546" width="412" height="457"/>
+	<SubTexture name="phil idle0003" x="5396" y="546" width="412" height="457"/>
+	<SubTexture name="phil idle0004" x="5848" y="546" width="412" height="457"/>
+	<SubTexture name="phil idle0005" x="6300" y="546" width="412" height="457"/>
+	<SubTexture name="phil idle0006" x="6752" y="546" width="412" height="457"/>
+	<SubTexture name="phil idle0007" x="7204" y="546" width="412" height="457"/>
+	<SubTexture name="phil idle0008" x="7656" y="546" width="412" height="457"/>
+	<SubTexture name="phil idle0009" x="0" y="562" width="412" height="457"/>
+	<SubTexture name="phil idle0010" x="452" y="562" width="412" height="457"/>
+	<SubTexture name="phil idle0011" x="904" y="562" width="412" height="457"/>
+	<SubTexture name="phil idle0012" x="1356" y="562" width="412" height="457"/>
+	<SubTexture name="phil idle0013" x="1808" y="562" width="412" height="457"/>
+	<SubTexture name="phil idle0014" x="2260" y="562" width="412" height="457"/>
+</TextureAtlas>
