@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				-10,
-				-324
+				-7,
+				-327
 			],
 			"loop": false,
 			"fps": 24,
@@ -34,41 +34,74 @@
 			"name": "phil Up"
 		},
 		{
-			"offsets": [
-				40,
-				-410
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "dead",
-			"indices": [],
-			"name": "rip bozo"
-		},
-		{
 			"offsets": [
-				49,
-				-207
+				-74,
+				-201
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "phil Right"
+			"fps": 24,
+			"name": "phil Left",
+			"indices": []
 		},
 		{
 			"offsets": [
-				-57,
-				-200
+				-14,
+				-324
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "phil miss DOWN"
+		},
+		{
+			"offsets": [
+				-36,
+				-151
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "phil miss UP"
+		},
+		{
+			"offsets": [
+				43,
+				-198
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "phil miss RIGHT"
+		},
+		{
+			"offsets": [
+				-56,
+				-186
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "phil miss LEFT"
+		},
+		{
+			"offsets": [
+				65,
+				-207
 			],
 			"indices": [],
 			"fps": 24,
 			"anim": "singRIGHT",
 			"loop": false,
-			"name": "phil Left"
+			"name": "phil Right"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/phil",
+	"image": "characters/phil-playable",
 	"position": [
 		0,
 		0
