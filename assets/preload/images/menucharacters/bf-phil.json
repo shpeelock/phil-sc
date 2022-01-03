@@ -1,0 +1,10 @@
+{
+	"idle_anim": "Idle",
+	"confirm_anim": "Idle",
+	"position": [
+		255,
+		-57
+	],
+	"scale": 1,
+	"image": "bf-phil"
+}

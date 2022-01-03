@@ -1,12 +1,12 @@
 {
-	"storyName": "evil phil be like: i love my job",
+	"storyName": "little payback",
 	"hideFreeplay": false,
-	"weekBackground": "stage",
+	"weekBackground": "phil-evil",
 	"weekBefore": "week1",
 	"startUnlocked": true,
 	"weekCharacters": [
 		"",
-		"bf",
+		"bf-phil",
 		""
 	],
 	"songs": [
@@ -21,11 +21,11 @@
 		],
 		[
 			"little revenge",
-			"dad",
+			"little-man",
 			[
-				146,
-				113,
-				253
+				255,
+				255,
+				255
 			]
 		]
 	],

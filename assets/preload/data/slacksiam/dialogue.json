@@ -1,0 +1,67 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "PHIL!!! WHY AREN'T YOU WORKING!!! YOU HAVE TO FINISH A REPORT IN 3 HOURS!!",
+			"boxState": "angry",
+			"speed": 0.04,
+			"portrait": "boss-diag"
+		},
+		{
+			"expression": "talk",
+			"text": "YOU'RE FIRED!!! YOU'VE PISSED ME OFF WITH YOUR SLACKING!!!",
+			"boxState": "angry",
+			"speed": 0.04,
+			"portrait": "boss-diag"
+		},
+		{
+			"expression": "demon",
+			"text": "AND THAT KID BESIDE YOU, IS THAT THE REASON I HEARD THOSE HORRIBLE SOUNDS?",
+			"boxState": "angry",
+			"speed": 0.04,
+			"portrait": "boss-diag"
+		},
+		{
+			"expression": "talk",
+			"text": "uhmmmmmm i just wanted to rap battle :3",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "demon",
+			"text": "SO THAT'S WHY YOU WERE SLACKING?! IM GONNA KILL THE BOTH OF YOU NOW!!",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "boss-diag"
+		},
+		{
+			"expression": "demon",
+			"text": "YOU ARE ALL DISMISSED... IN HELL!!!!",
+			"boxState": "angry",
+			"portrait": "boss-diag",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "smh this demon really understimating the laws of friday night funkin bro..",
+			"boxState": "normal",
+			"portrait": "bf",
+			"speed": 0.03
+		},
+		{
+			"expression": "talk",
+			"text": "guess theres no choice but to fight him now",
+			"boxState": "normal",
+			"portrait": "phil-diag",
+			"speed": 0.04
+		},
+		{
+			"expression": "pissed",
+			"text": "i still hate you",
+			"boxState": "normal",
+			"portrait": "phil-diag",
+			"speed": 0.05
+		}
+	]
+}

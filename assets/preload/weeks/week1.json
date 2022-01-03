@@ -1,12 +1,12 @@
 {
 	"storyName": "phil",
 	"hideFreeplay": false,
-	"weekBackground": "stage",
+	"weekBackground": "phil",
 	"weekBefore": "tutorial",
 	"startUnlocked": true,
 	"weekCharacters": [
 		"",
-		"bf",
+		"bf-phil",
 		""
 	],
 	"songs": [

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="philTitle.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="logo0000" x="0" y="0" width="1035" height="1035"/>
+	<SubTexture name="logo0001" x="0" y="1075" width="1035" height="1035"/>
+	<SubTexture name="logo0002" x="0" y="2150" width="1035" height="1035"/>
+	<SubTexture name="logo0003" x="0" y="3225" width="1035" height="1035"/>
+	<SubTexture name="logo0004" x="0" y="4300" width="1035" height="1035"/>
+	<SubTexture name="logo0005" x="0" y="5375" width="1035" height="1035"/>
+	<SubTexture name="logo0006" x="0" y="6450" width="1035" height="1035"/>
+	<SubTexture name="logo0007" x="1075" y="0" width="1035" height="1035"/>
+	<SubTexture name="logo0008" x="1075" y="1075" width="1035" height="1035"/>
+	<SubTexture name="logo0009" x="1075" y="2150" width="1035" height="1035"/>
+	<SubTexture name="logo0010" x="1075" y="3225" width="1035" height="1035"/>
+	<SubTexture name="logo0011" x="1075" y="4300" width="1035" height="1035"/>
+	<SubTexture name="logo0012" x="1075" y="5375" width="1035" height="1035"/>
+	<SubTexture name="logo0013" x="1075" y="6450" width="1035" height="1035"/>
+</TextureAtlas>

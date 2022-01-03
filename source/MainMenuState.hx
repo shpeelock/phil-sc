@@ -295,8 +295,6 @@ class MainMenuState extends MusicBeatState
 			{
 				spr.animation.play('selected');
 				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y);
-				//spr.offset.x = 0.15 * (spr.frameWidth / 2 + 180);
-				//spr.offset.y = 0.15 * spr.frameHeight;
 				FlxG.log.add(spr.frameWidth);
 			}
 		});

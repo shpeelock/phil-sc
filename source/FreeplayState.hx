@@ -26,7 +26,7 @@ class FreeplayState extends MusicBeatState
 
 	var selector:FlxText;
 	private static var curSelected:Int = 0;
-	private static var curDifficulty:Int = 1;
+	private static var curDifficulty:Int = 0;
 
 	var scoreBG:FlxSprite;
 	var scoreText:FlxText;
@@ -154,7 +154,6 @@ class FreeplayState extends MusicBeatState
 		bg.color = songs[curSelected].color;
 		intendedColor = bg.color;
 		changeSelection();
-		changeDiff();
 
 		var swag:Alphabet = new Alphabet(1, 0, "swag");
 
@@ -253,11 +252,6 @@ class FreeplayState extends MusicBeatState
 			changeSelection(shiftMult);
 		}
 
-		if (controls.UI_LEFT_P)
-			changeDiff(-1);
-		if (controls.UI_RIGHT_P)
-			changeDiff(1);
-
 		if (controls.BACK)
 		{
 			if(colorTween != null) {
@@ -297,7 +291,7 @@ class FreeplayState extends MusicBeatState
 			if(!OpenFlAssets.exists(Paths.json(songLowercase + '/' + poop))) {
 			#end
 				poop = songLowercase;
-				curDifficulty = 1;
+				curDifficulty = 0;
 				trace('Couldnt find file');
 			}
 			trace(poop);
@@ -342,25 +336,6 @@ class FreeplayState extends MusicBeatState
 			vocals.destroy();
 		}
 		vocals = null;
-	}
-
-	function changeDiff(change:Int = 0)
-	{
-		curDifficulty += change;
-
-		if (curDifficulty < 0)
-			curDifficulty = CoolUtil.difficultyStuff.length-1;
-		if (curDifficulty >= CoolUtil.difficultyStuff.length)
-			curDifficulty = 0;
-
-		#if !switch
-		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
-		intendedRating = Highscore.getRating(songs[curSelected].songName, curDifficulty);
-		#end
-
-		PlayState.storyDifficulty = curDifficulty;
-		diffText.text = '< ' + CoolUtil.difficultyString() + ' >';
-		positionHighscore();
 	}
 
 	function changeSelection(change:Int = 0)
@@ -417,7 +392,6 @@ class FreeplayState extends MusicBeatState
 				// item.setGraphicSize(Std.int(item.width));
 			}
 		}
-		changeDiff();
 		Paths.currentModDirectory = songs[curSelected].folder;
 	}
 

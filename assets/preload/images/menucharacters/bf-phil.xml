@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bf-phil.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Idle instance 10000" x="0" y="0" width="625" height="313"/>
+	<SubTexture name="Idle instance 10001" x="665" y="0" width="625" height="313"/>
+	<SubTexture name="Idle instance 10002" x="1330" y="0" width="625" height="313"/>
+	<SubTexture name="Idle instance 10003" x="0" y="353" width="625" height="313"/>
+	<SubTexture name="Idle instance 10004" x="665" y="353" width="625" height="313"/>
+	<SubTexture name="Idle instance 10005" x="1330" y="353" width="625" height="313"/>
+	<SubTexture name="Idle instance 10006" x="0" y="706" width="625" height="313"/>
+	<SubTexture name="Idle instance 10007" x="0" y="1059" width="625" height="313"/>
+	<SubTexture name="Idle instance 10008" x="0" y="1412" width="625" height="313"/>
+	<SubTexture name="Idle instance 10009" x="665" y="706" width="625" height="313"/>
+	<SubTexture name="Idle instance 10010" x="1330" y="706" width="625" height="313"/>
+	<SubTexture name="Idle instance 10011" x="665" y="1059" width="625" height="313"/>
+	<SubTexture name="Idle instance 10012" x="1330" y="1059" width="625" height="313"/>
+	<SubTexture name="Idle instance 10013" x="665" y="1412" width="625" height="313"/>
+</TextureAtlas>

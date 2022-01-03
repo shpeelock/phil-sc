@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="philBoppers.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="phils0000" x="0" y="0" width="1626" height="1093"/>
+	<SubTexture name="phils0001" x="0" y="1133" width="1626" height="1093"/>
+	<SubTexture name="phils0002" x="0" y="2266" width="1626" height="1093"/>
+	<SubTexture name="phils0003" x="0" y="3399" width="1626" height="1093"/>
+	<SubTexture name="phils0004" x="0" y="4532" width="1626" height="1093"/>
+	<SubTexture name="phils0005" x="0" y="5665" width="1626" height="1093"/>
+	<SubTexture name="phils0006" x="0" y="6798" width="1626" height="1093"/>
+	<SubTexture name="phils0007" x="1666" y="0" width="1626" height="1093"/>
+	<SubTexture name="phils0008" x="1666" y="1133" width="1626" height="1093"/>
+	<SubTexture name="phils0009" x="1666" y="2266" width="1626" height="1093"/>
+	<SubTexture name="phils0010" x="1666" y="3399" width="1626" height="1093"/>
+	<SubTexture name="phils0011" x="1666" y="4532" width="1626" height="1093"/>
+	<SubTexture name="phils0012" x="1666" y="5665" width="1626" height="1093"/>
+	<SubTexture name="phils0013" x="1666" y="6798" width="1626" height="1093"/>
+</TextureAtlas>

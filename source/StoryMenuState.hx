@@ -30,7 +30,7 @@ class StoryMenuState extends MusicBeatState
 
 	var scoreText:FlxText;
 
-	private static var curDifficulty:Int = 1;
+	private static var curDifficulty:Int = 0;
 
 	var txtWeekTitle:FlxText;
 	var bgSprite:FlxSprite;
@@ -150,7 +150,6 @@ class StoryMenuState extends MusicBeatState
 			sprDifficulty.antialiasing = ClientPrefs.globalAntialiasing;
 			sprDifficultyGroup.add(sprDifficulty);
 		}
-		changeDifficulty();
 
 		difficultySelectors.add(sprDifficultyGroup);
 
@@ -225,11 +224,6 @@ class StoryMenuState extends MusicBeatState
 				leftArrow.animation.play('press');
 			else
 				leftArrow.animation.play('idle');
-
-			if (controls.UI_RIGHT_P)
-				changeDifficulty(1);
-			if (controls.UI_LEFT_P)
-				changeDifficulty(-1);
 
 			if (controls.ACCEPT)
 			{
@@ -312,30 +306,6 @@ class StoryMenuState extends MusicBeatState
 		} else {
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 		}
-	}
-
-	function changeDifficulty(change:Int = 0):Void
-	{
-		curDifficulty += change;
-
-		if (curDifficulty < 0)
-			curDifficulty = CoolUtil.difficultyStuff.length-1;
-		if (curDifficulty >= CoolUtil.difficultyStuff.length)
-			curDifficulty = 0;
-
-		sprDifficultyGroup.forEach(function(spr:FlxSprite) {
-			spr.visible = false;
-			if(curDifficulty == spr.ID) {
-				spr.visible = true;
-				spr.alpha = 0;
-				spr.y = leftArrow.y - 15;
-				FlxTween.tween(spr, {y: leftArrow.y + 15, alpha: 1}, 0.07);
-			}
-		});
-
-		#if !switch
-		intendedScore = Highscore.getWeekScore(WeekData.weeksList[curWeek], curDifficulty);
-		#end
 	}
 
 	var lerpScore:Int = 0;
