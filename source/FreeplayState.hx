@@ -318,7 +318,7 @@ class FreeplayState extends MusicBeatState
 		}
 
 
-		if (songs[curSelected].songName.toLowerCase() == 'blosims'){
+		if (songs[curSelected].songName.toLowerCase() == 'blosims' || songs[curSelected].songName.toLowerCase() == 'slacksiam'){
 			philbg.alpha = 0;
 			bloxiam.alpha = 1;
 		} else {

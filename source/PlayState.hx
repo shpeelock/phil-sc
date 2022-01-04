@@ -476,7 +476,7 @@ class PlayState extends MusicBeatState
 				ripbozo.antialiasing = true;
 				add(ripbozo);
 
-			case 'slackBg':
+			case 'slackBg' | 'slackbgfnafWHATREALBLOXIAM':
 
 				//NOTE TO SELF: deez n
 
@@ -894,7 +894,7 @@ class PlayState extends MusicBeatState
 				insert(members.indexOf(dadGroup) - 1, evilTrail);
 			case 'philBg':
 				gf.visible = false;
-			case 'slackBg':
+			case 'slackBg' | 'slackbgfnafWHATREALBLOXIAM':
 				gf.visible = false;
 			case 'workerBg':
 				gf.visible = false;
@@ -1072,7 +1072,7 @@ class PlayState extends MusicBeatState
 			botplayTxt.y = timeBarBG.y - 78;
 		}
 
-		if (curSong.toLowerCase() == 'slack')
+		if (curSong.toLowerCase() == 'slack' || curSong.toLowerCase() == 'slacksiam')
 			{
 					var slackShit:SlackShader;
 					slackShit = new SlackShader();
@@ -1315,7 +1315,7 @@ class PlayState extends MusicBeatState
 
 	function spacebarInstructions():Void {
 
-		if(curStage == 'slackBg'){
+		if(curStage == 'slackBg' || curStage == 'slackbgfnafWHATREALBLOXIAM'){
 			add(bossKnife);
 		}
 
@@ -1694,7 +1694,7 @@ class PlayState extends MusicBeatState
 					santa.dance(true);
 				}
 
-				if (curStage == 'slackBg' || curStage == 'workerBg'){
+				if (curStage == 'slackBg' || curStage == 'workerBg' || curStage == 'slackbgfnafWHATREALBLOXIAM'){
 					spacebarInstructions();
 				}
 
@@ -3796,7 +3796,7 @@ class PlayState extends MusicBeatState
 
 	private function keyShit():Void
 	{
-		if(curStage == 'slackBg' || curStage == 'workerBg' || curStage == 'lilmanBg'){
+		if(curStage == 'slackBg' || curStage == 'workerBg' || curStage == 'lilmanBg' || curStage == 'slackbgfnafWHATREALBLOXIAM'){
 
 			if(FlxG.keys.justPressed.SPACE){
 				trace('i am alive');
@@ -4364,7 +4364,7 @@ class PlayState extends MusicBeatState
 	}
 
 	function bossAttackAnimation(){
-		if (curStage == 'slackBg'){
+		if (curStage == 'slackBg' || curStage == 'slackbgfnafWHATREALBLOXIAM'){
 			boss.animation.play('attack', true);
 			new FlxTimer().start(0.3, function(tmr:FlxTimer){
 				boss.animation.play('idle', true);
@@ -4388,34 +4388,34 @@ class PlayState extends MusicBeatState
 		var lilmanAttack:FlxSound = new FlxSound().loadEmbedded(Paths.sound('littlemanAttack', 'phil'));
 		lilmanAttack.volume = 0.5;
 
-		if (curStage == 'slackBg'){
+		switch(curStage){
 
-			bossKnife.animation.play('attack', true);
-			bossAttackAnimation();
-			bossfire.play();
-			bossKnife.alpha = 1;
-			if(cpuControlled){
-				dad.playAnim('dodge', true);
-				boyfriend.playAnim('alt-dodge', true);
-			}
-		}
+			case 'slackBg' | 'slackbgfnafWHATREALBLOXIAM':
+				bossKnife.animation.play('attack', true);
+				bossAttackAnimation();
+				bossfire.play();
+				bossKnife.alpha = 1;
+				if(cpuControlled){
+					dad.playAnim('dodge', true);
+					boyfriend.playAnim('alt-dodge', true);
+				}
 
-			else if(curStage == 'lilmanBg'){
+			case 'workerBg':
+				bossfire.play();
+				dad.playAnim('attack', true);
+				if(cpuControlled){
+					boyfriend.playAnim('alt-dodge', true);
+				}
+
+			case 'lilmanBg':
 				lilmanAttack.play();
 				lilmanSpike.animation.play('attack', true);
 				lilmanSpike.alpha = 1;
 				if(cpuControlled){
 					boyfriend.playAnim('dodge', true);
 				}
-			}
-			else if(curStage == 'workerBg'){
-				bossfire.play();
-				dad.playAnim('attack', true);
-				if(cpuControlled){
-					boyfriend.playAnim('alt-dodge', true);
-				}
-			}
 
+		}
 			new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
 				//botplay check
