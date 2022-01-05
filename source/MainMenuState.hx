@@ -110,7 +110,7 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
-		var philversionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "vs phil v1.0", 12);
+		var philversionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "vs phil v1.0 - patch 1", 12);
 		philversionShit.scrollFactor.set();
 		philversionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(philversionShit);
@@ -237,13 +237,6 @@ class MainMenuState extends MusicBeatState
 					});
 				}
 			}
-			#if desktop
-			else if (FlxG.keys.justPressed.SEVEN)
-			{
-				selectedSomethin = true;
-				MusicBeatState.switchState(new MasterEditorMenu());
-			}
-			#end
 		}
 
 		super.update(elapsed);
